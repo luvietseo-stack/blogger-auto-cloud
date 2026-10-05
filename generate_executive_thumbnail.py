@@ -83,36 +83,28 @@ def extract_2lines_hook(title, summary="", keyword=""):
     text_corpus = (clean_title + " " + summary + " " + keyword).lower()
 
     # Nhận diện theo từ khóa ngành trọng tâm
-    if any(k in text_corpus for k in ['bất động sản', 'bat dong san', 'nhà đất']):
+    if any(k in text_corpus for k in ['topaz', 'bni topaz']):
+        line1, line2 = "BNI TOPAZ", "ONLINE TOÀN CẦU"
+    elif any(k in text_corpus for k in ['cho là nhận', 'givers gain']):
+        line1, line2 = "CHO LÀ NHẬN", "GIVERS GAIN"
+    elif any(k in text_corpus for k in ['referral', 'cơ hội kinh doanh']):
+        line1, line2 = "TRAO REFERRAL", "TĂNG TRƯỞNG GẤP 3"
+    elif any(k in text_corpus for k in ['độc quyền', 'doc quyen']):
+        line1, line2 = "ĐỘC QUYỀN", "TRONG CHAPTER"
+    elif any(k in text_corpus for k in ['kết nối kinh doanh', 'networking']):
+        line1, line2 = "KẾT NỐI ĐỈNH CAO", "DOANH NHÂN CHẤT"
+    elif any(k in text_corpus for k in ['zoom', 'họp online', 'online']):
+        line1, line2 = "BNI ONLINE", "TIẾT KIỆM THỜI GIAN"
+    elif any(k in text_corpus for k in ['bni là gì', 'tại sao bni', 'bni']):
+        line1, line2 = "TỔ CHỨC BNI", "KẾT NỐI TOÀN CẦU"
+    elif any(k in text_corpus for k in ['bất động sản', 'bat dong san', 'nhà đất']):
         line1, line2 = "BẤT ĐỘNG SẢN", "CHỐT TRIỆU ĐÔ"
     elif any(k in text_corpus for k in ['hóa đơn điện tử', 'hoa don dien tu', 'xuất hóa đơn']):
         line1, line2 = "XUẤT HÓA ĐƠN", "TỰ ĐỘNG 100%"
-    elif any(k in text_corpus for k in ['pancake', 'invoice']):
-        line1, line2 = "PANCAKE INVOICE", "TỰ ĐỘNG ĐẨY ĐƠN"
-    elif any(k in text_corpus for k in ['đồng nai', 'biên hòa', 'bien hoa']):
-        line1, line2 = "WEBSITE ĐỒNG NAI", "TOP 1 GOOGLE"
-    elif any(k in text_corpus for k in ['bom hàng', 'hoàn hàng', 'cod', 'ép tỷ lệ hoàn']):
-        line1, line2 = "CHẶN BOM HÀNG", "HOÀN DƯỚI 3%"
-    elif any(k in text_corpus for k in ['chi phí sàn', 'bóc tách', '18-25%', 'phí ẩn']):
-        line1, line2 = "PHÍ SÀN 18-25%", "CỨU LỢI NHUẬN"
     elif any(k in text_corpus for k in ['quảng cáo', 'ads facebook', 'tiktok ads', 'cắt giảm 50%']):
         line1, line2 = "TIẾT KIỆM ADS", "BÙNG NỔ ĐƠN"
-    elif any(k in text_corpus for k in ['khóa shop', 'mất trắng', 'tự chủ kênh']):
-        line1, line2 = "BỊ KHÓA SHOP", "CÁCH TỰ CHỦ"
-    elif any(k in text_corpus for k in ['không sở hữu', 'phễu riêng', 'hàng nghìn đơn trên sàn']):
-        line1, line2 = "BÁN NGHÌN ĐƠN", "KHÔNG CÓ DATA?"
-    elif any(k in text_corpus for k in ['tỷ lệ chốt dưới 5%', 'hàng trăm tin nhắn']):
-        line1, line2 = "ADS RA TIN NHẮN", "SAO KHÔNG CHỐT?"
-    elif any(k in text_corpus for k in ['thuê đơn vị', '10-20 triệu', 'bẫy chi phí']):
-        line1, line2 = "LÀM WEB 10-20TR", "BẪY CHI PHÍ!"
-    elif any(k in text_corpus for k in ['bỏ hoang', 'không ra đơn']):
-        line1, line2 = "WEB BỎ HOANG?", "CÁCH RA ĐƠN"
-    elif any(k in text_corpus for k in ['uid sang', 'uid']):
-        line1, line2 = "CHUYỂN ĐỔI UID", "LẤY SỐ PHONE"
-    elif any(k in text_corpus for k in ['template', 'chuẩn cro', '30 giây']):
-        line1, line2 = "WEB CHUẨN CRO", "XONG 30 GIÂY"
-    elif any(k in text_corpus for k in ['teo tóp', 'ra nhiều đơn']):
-        line1, line2 = "CÀNG NHIỀU ĐƠN", "CÀNG MẤT LÃI?"
+    elif any(k in text_corpus for k in ['chi phí sàn', 'bóc tách', '18-25%', 'phí ẩn']):
+        line1, line2 = "PHÍ SÀN 18-25%", "CỨU LỢI NHUẬN"
     else:
         # Tự động cắt tách thông minh nếu đề tài mới
         clean_words = [w.strip() for w in re.sub(r'[:,\-?]', ' ', clean_title).split() if w.strip()]
@@ -130,25 +122,23 @@ def generate_bg_prompt_from_summary(title, summary=""):
     """
     Sinh prompt tiếng Anh cho Imagen / AI sinh ảnh nền sát với tóm tắt bài blog:
     - 16:9, điện ảnh, ánh sáng nghệ thuật
-    - Môi trường thực tế tương ứng với đề tài (Bất động sản, Bán lẻ, Ads, Logistics, v.v.)
+    - Môi trường thực tế tương ứng với đề tài (BNI Networking, Doanh nhân, Hội nghị Zoom, Bất động sản, v.v.)
     - Khoảng tối bên trái (Left negative space) để chữ to nổi bật
     """
     combined = (str(title) + " " + str(summary)).lower()
 
-    if any(k in combined for k in ['bất động sản', 'nhà đất', 'landing page bất động sản']):
+    if any(k in combined for k in ['bni', 'topaz', 'referral', 'kết nối kinh doanh', 'networking', 'givers gain']):
+        topic_desc = "Prestigious executive business boardroom with confident Asian business leaders in bespoke suits networking and shaking hands, sleek Zoom video conference screen on the wall, BNI corporate red and rich navy accents, warm ambient executive illumination"
+    elif any(k in combined for k in ['bất động sản', 'nhà đất', 'landing page bất động sản']):
         topic_desc = "Modern luxury architectural villa with glass facade at golden hour sunset, warm interior lighting, sleek infinity pool, minimalist elegance"
     elif any(k in combined for k in ['hóa đơn', 'invoice', 'bán lẻ', 'pancake', 'pos']):
         topic_desc = "Upscale modern boutique retail store interior, illuminated smart digital POS touchscreen terminal on a sleek wooden counter, warm ambient lighting"
     elif any(k in combined for k in ['quảng cáo', 'ads', 'facebook', 'tiktok', 'marketing']):
         topic_desc = "High-tech digital marketing workspace, dual curved monitors glowing with sleek upward business analytical graphs, dark amber and cyan ambient atmosphere"
-    elif any(k in combined for k in ['bom hàng', 'cod', 'vận chuyển', 'giao hàng']):
-        topic_desc = "Modern automated e-commerce fulfillment center, organized packages on conveyor belt with warm cinematic spotlight, professional logistics ambiance"
     elif any(k in combined for k in ['đồng nai', 'doanh nghiệp', 'website doanh nghiệp', 'thiết kế web']):
         topic_desc = "Sophisticated contemporary executive glass office overlooking dynamic city skyline at twilight, clean marble desk, architectural depth"
-    elif any(k in combined for k in ['sàn tmđt', 'shopee', 'lazada', 'tiktok shop', 'lợi nhuận']):
-        topic_desc = "E-commerce strategy command desk, glowing laptop showing growing e-commerce dashboard, stacked branded parcels in soft focus, dramatic lighting"
     else:
-        topic_desc = f"Cinematic business workspace scene relevant to {title[:35]}, modern aesthetic, professional ambient lighting"
+        topic_desc = f"Cinematic executive business networking scene relevant to {title[:35]}, BNI red and navy corporate atmosphere, professional ambient lighting"
 
     prompt = (
         f"Cinematic 16:9 YouTube thumbnail background photography. {topic_desc}. "
@@ -277,7 +267,7 @@ def build_executive_thumbnail(
         outline=(56, 189, 248, 160),
         width=2
     )
-    draw.text((lx + 25, ly + 10), "AILADI™", font=font_logo, fill=(255, 255, 255, 255))
+    draw.text((lx + 20, ly + 10), "BNI TOPAZ™", font=font_logo, fill=(255, 255, 255, 255))
 
     # 7. Tối ưu hóa & nén ảnh đa tầng (WebP + JPEG Progressive 1200x675)
     os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
@@ -339,8 +329,8 @@ def compress_and_save_image(base_img, output_webp_path, output_jpg_path=None, ti
     desc = f"{keyword} - {title}".strip(" -") if keyword else title
     if desc:
         exif[0x010E] = desc[:120]  # ImageDescription
-    exif[0x013B] = "AILADI LuViet"  # Artist / Thương hiệu
-    exif[0x8298] = "Bản quyền hình ảnh thuộc về AILADI LuViet (my.luviet.com)"  # Copyright
+    exif[0x013B] = "BNI Topaz Chapter Online"  # Artist / Thương hiệu
+    exif[0x8298] = "Bản quyền hình ảnh thuộc về BNI Topaz Chapter Online (bnitopaz.com)"  # Copyright
 
     # 4. Lưu định dạng WebP (Google Next-Gen Format)
     os.makedirs(os.path.dirname(os.path.abspath(output_webp_path)), exist_ok=True)
@@ -488,7 +478,7 @@ def create_post_thumbnail(title, summary="", keyword="", custom_image_url="", ap
         output_path=out_webp,
         headline_top=line1,
         headline_bottom=line2,
-        badge_label="CHIẾN LƯỢC 2026",
+        badge_label="BNI TOPAZ ONLINE",
         title=title,
         keyword=keyword
     )

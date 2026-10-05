@@ -146,10 +146,12 @@ def get_next_schedule_slots(count=1, existing_history=None):
 
     return slots
 
-# Thông tin thương hiệu LuViet & Nền tảng AILADI
-REGISTER_URL = os.environ.get('REGISTER_URL', 'https://my.luviet.com/register')
-ZALO_URL = os.environ.get('ZALO_URL', 'https://zalo.me/1501073926693571291')
-FANPAGE_URL = os.environ.get('FANPAGE_URL', 'https://www.facebook.com/webluviet/')
+# Thông tin thương hiệu & Kênh kết nối BNI Topaz Chapter Online
+CTA_URL = os.environ.get('CTA_URL', 'https://www.facebook.com/topazchapteronline')
+WEBSITE_URL = os.environ.get('WEBSITE_URL', 'https://www.bnitopaz.com')
+REGISTER_URL = os.environ.get('REGISTER_URL', CTA_URL)
+ZALO_URL = os.environ.get('ZALO_URL', '')
+FANPAGE_URL = os.environ.get('FANPAGE_URL', CTA_URL)
 
 TOPICS_FILE = os.path.join(os.path.dirname(__file__), 'topics.txt')
 HISTORY_FILE = os.path.join(os.path.dirname(__file__), 'posted_history.json')
@@ -252,46 +254,48 @@ def generate_seo_article(topic, labels, summary='', cta_url=REGISTER_URL):
     print(f"🔑 Số lượng API Key trong hồ chứa (Key Pool): {len(api_keys)}")
 
     prompt = f"""
-Bạn là chuyên gia Content Marketing, SEO Master và Copywriter hàng đầu Việt Nam. Hãy tạo một bài viết chuẩn SEO chuyên sâu, cấu trúc chặt chẽ, tối ưu tỷ lệ chuyển đổi (CRO) bằng tiếng Việt cho nền tảng Blogger/Blogspot theo các thông số sau:
+Bạn là Chuyên gia Cao cấp về Marketing B2B, Referral Networking, Cố vấn Doanh nghiệp và Copywriter hàng đầu Việt Nam, am hiểu tường tận văn hóa và quy trình vận hành của tổ chức BNI (Business Network International).
+Hãy tạo một bài viết chuẩn SEO chuyên sâu, cấu trúc chặt chẽ, tối ưu tỷ lệ chuyển đổi (CRO) bằng tiếng Việt cho website chính thức của BNI Topaz Chapter Online (bnitopaz.com) theo các thông số sau:
 
 - Chủ đề / Từ khóa chính: "{topic}"
 - Nhãn chuyên mục mong muốn: "{', '.join(labels)}"
 {f'- Tóm tắt gợi ý / Góc nhìn: "{summary}"' if summary else ''}
 - Liên kết chuyển đổi mục tiêu (BẮT BUỘC): "{cta_url}"
 - Độ dài mục tiêu: Khoảng 1500 - 2000 từ.
-- Tông giọng: Chuyên gia thực chiến, đồng cảm sâu sắc với nỗi đau của người kinh doanh, lập luận sắc sảo, truyền cảm hứng và thôi thúc hành động mạnh mẽ.
+- Tông giọng: Chuyên gia thực chiến, đĩnh đạc, truyền cảm hứng kinh doanh mạnh mẽ, thấu hiểu sâu sắc những thách thức của chủ doanh nghiệp hiện đại và thôi thúc hành động kết nối giao thương.
 
 CHIẾN LƯỢC NỘI DUNG & ĐIỀU HƯỚNG CHUYỂN ĐỔI (QUAN TRỌNG NHẤT):
 1. ĐỐI TƯỢNG VÀ CHÂN DUNG KHÁCH HÀNG MỤC TIÊU:
-   - Bài viết đánh trúng nỗi đau thực tế của: Chủ shop online bán lẻ (thời trang, mỹ phẩm, mẹ & bé), hộ kinh doanh cá thể, chủ quán cafe/nhà hàng/quán ăn (F&B), chủ cơ sở dịch vụ/spa/nha khoa và doanh nghiệp vừa & nhỏ (SMEs).
-   - Nỗi đau: Chi phí sàn TMĐT tăng cao (18-25%), rủi ro khóa shop mất trắng khách, chi phí quảng cáo đắt đỏ, đơn hàng bị bom do COD, thuê làm website cồng kềnh 10-20 triệu mà không hiệu quả, quản lý đơn hàng thủ công thất thoát data.
+   - Bài viết đánh trúng nỗi đau thực tế của: Chủ doanh nghiệp vừa và nhỏ (SMEs), Giám đốc điều hành (CEO / Founder), Trưởng phòng kinh doanh, nhà đầu tư, chủ cơ sở dịch vụ/thương mại và doanh nhân khởi nghiệp.
+   - Nỗi đau:
+     + Bán hàng truyền thống ngày càng khó khăn, chi phí quảng cáo (Facebook/Google/TikTok Ads) đắt đỏ nhưng tỷ lệ chuyển đổi thấp và thiếu sự gắn kết.
+     + Thiếu mạng lưới quan hệ chất lượng, cô đơn trên hành trình quản trị và phát triển doanh nghiệp.
+     + Tham gia các câu lạc bộ truyền thống tốn kém thời gian đi lại, kẹt xe, chi phí ăn uống gặp mặt cao, bị giới hạn phạm vi địa lý hẹp trong một quận/huyện.
+     + Muốn mở rộng quy mô kinh doanh toàn quốc và vươn ra quốc tế nhưng thiếu đối tác và kênh kết nối uy tín.
 
-2. GIẢI PHÁP ĐỘT PHÁ - NỀN TẢNG AILADI (my.luviet.com):
-   - Định vị AILADI là hệ sinh thái tạo website bán hàng tự động 24/7 và giải pháp chuyển đổi số toàn diện.
-   - Khởi tạo siêu tốc 30 giây không cần biết lập trình (No-Code).
-   - Form đặt hàng 1-chạm (1-Click Checkout) siêu nhanh, tối ưu trải nghiệm khách hàng.
-   - Tích hợp thanh toán VietQR động tự điền số tiền và nội dung, quét app ngân hàng 3 giây tiền về tài khoản ngay, ép tỷ lệ bom hàng về dưới 3%.
-   - Kết nối tự động API 4 hãng vận chuyển lớn (GHTK, GHN, Viettel Post, VNPost), tự tính phí ship đến từng xã/phường, in mã vận đơn A6 trong 1 giây.
-   - Menu QR Code điện tử đặt món tại bàn và giao tận nơi cho ngành F&B, quán cafe, nhà hàng.
-   - Trợ lý AI Gemini 24/7 tự động tư vấn, chốt đơn ca đêm và viết bài SEO.
-   - Cơ sở dữ liệu riêng biệt (Database Per-Tenant) an toàn tuyệt đối 100% doanh thu và dữ liệu khách hàng.
+2. GIẢI PHÁP ĐỘT PHÁ - BNI TOPAZ CHAPTER ONLINE (bnitopaz.com):
+   - Giới thiệu BNI Topaz Chapter Online là một trong những Chapter trực tuyến kiểu mẫu, năng động và hiệu quả hàng đầu của BNI Việt Nam.
+   - Triết lý kinh doanh đỉnh cao: "Givers Gain®" (Cho là Nhận) – Nuôi dưỡng sự thịnh vượng bằng cách chủ động trao đi giá trị và cơ hội kinh doanh cho đồng đội.
+   - 7 Giá trị Cốt lõi của BNI: Cho là Nhận, Xây dựng mối quan hệ bền vững, Học tập suốt đời, Truyền thống và Đổi mới, Thái độ tích cực, Trách nhiệm và Tinh thần trách nhiệm, Sự công nhận xứng đáng.
+   - Cơ chế Độc quyền Ngành nghề: Mỗi ngành nghề chỉ có DUY NHẤT 1 đại diện trong Chapter, không có cạnh tranh nội bộ, tất cả thành viên trở thành đội ngũ kinh doanh đại sứ giới thiệu khách hàng miễn phí cho nhau.
+   - Lợi thế vượt trội của Chapter Online: Họp định kỳ hàng tuần qua nền tảng Zoom chuyên nghiệp vào sáng sớm; Tiết kiệm 100% thời gian di chuyển; Kết nối không biên giới giữa các doanh nhân khắp 63 tỉnh thành Việt Nam và giao thương quốc tế với các Chapter BNI toàn cầu.
+   - Quy trình tạo Referral chất lượng: Giúp các thành viên liên tục nhận được các cơ hội kinh doanh "nóng" (Referrals) từ những mối quan hệ tin cậy, rút ngắn chu kỳ bán hàng và gia tăng doanh số bền vững.
 
 3. ĐIỀU HƯỚNG LIÊN KẾT NỘI BỘ (INTERNAL LINKING - BẮT BUỘC):
-   - Trong thân bài: BẮT BUỘC chèn tự nhiên từ 2 đến 3 liên kết ngữ cảnh (contextual anchor text) dẫn người đọc bấm vào link đích: "{cta_url}".
-   - BẮT BUỘC chèn thêm 1 - 2 liên kết nội bộ tự nhiên đến các trang dịch vụ cột trụ của LuViet khi xuất hiện ngữ cảnh tương ứng:
-     + Khi đề cập đến dịch vụ thiết kế web chuyên nghiệp: <a href="https://www.luviet.com/p/thiet-ke-website-tron-goi.html" target="_blank">dịch vụ thiết kế website trọn gói</a>
-     + Khi đề cập đến chi phí/báo giá làm web: <a href="https://www.luviet.com/p/bang-gia-thiet-ke-website-tron-goi-tai.html" target="_blank">bảng giá thiết kế website LuViet</a>
-     + Khi đề cập đến khách hàng/doanh nghiệp khu vực Đồng Nai, Biên Hòa: <a href="https://www.luviet.com/p/dich-vu-thiet-ke-website-dong-nai.html" target="_blank">thiết kế website tại Đồng Nai</a>
+   - Trong thân bài: BẮT BUỘC chèn tự nhiên từ 2 đến 3 liên kết ngữ cảnh (contextual anchor text) dẫn người đọc bấm vào link Fanpage đăng ký: "{cta_url}".
+     Ví dụ các cụm từ chèn link: <a href="{cta_url}" target="_blank">kết nối cùng BNI Topaz Chapter Online</a>, <a href="{cta_url}" target="_blank">đăng ký tham dự buổi giao lưu doanh nhân BNI Topaz</a>, <a href="{cta_url}" target="_blank">tìm hiểu BNI Topaz Chapter</a>.
+   - BẮT BUỘC chèn thêm 1 - 2 liên kết nội bộ tự nhiên đến website chính thức:
+     + Khi nhắc đến website hoặc thông tin Chapter: <a href="https://www.bnitopaz.com" target="_blank">website BNI Topaz Chapter</a> hoặc <a href="https://www.bnitopaz.com" target="_blank">cộng đồng doanh nhân bnitopaz.com</a>.
 
 4. KHỐI CALL TO ACTION (CTA) ĐẲNG CẤP Ở CUỐI BÀI:
-   - BẮT BUỘC chèn khối CTA nổi bật dạng hộp viền nổi, màu sắc bắt mắt, tối ưu tỷ lệ nhấp chuột (CRO):
-     <div style="margin: 35px 0 20px; padding: 25px; background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%); border: 2px solid #0284c7; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(2, 132, 199, 0.15);">
-       <h3 style="color: #0369a1; margin-top: 0; font-size: 20px; font-weight: 700;">🚀 Bắt Đầu Đột Phá Doanh Số Bán Hàng Cùng AILADI Ngay Hôm Nay!</h3>
-       <p style="color: #334155; font-size: 15px; line-height: 1.6; margin-bottom: 20px;">Đừng để chi phí sàn và quy trình thủ công bào mòn lợi nhuận của bạn. Sở hữu ngay website bán hàng đa kênh tự động trong 30 giây – Miễn phí khởi tạo, không cần biết code, đồng bộ đơn hàng và thanh toán VietQR tức thì.</p>
-       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
-         <a href="{cta_url}" target="_blank" rel="noopener" style="background: #2563eb; color: #ffffff; font-weight: bold; font-size: 16px; padding: 12px 28px; border-radius: 8px; text-decoration: none; box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35); display: inline-block;">👉 Đăng Ký Tạo Website Miễn Phí Tại Đây</a>
-         <a href="{ZALO_URL}" target="_blank" rel="nofollow" style="background: #0068ff; color: #ffffff; font-weight: bold; font-size: 15px; padding: 12px 20px; border-radius: 8px; text-decoration: none; display: inline-block;">💬 Hỗ Trợ Kỹ Thuật Zalo OA</a>
-         <a href="{FANPAGE_URL}" target="_blank" rel="nofollow" style="background: #1877f2; color: #ffffff; font-weight: bold; font-size: 15px; padding: 12px 20px; border-radius: 8px; text-decoration: none; display: inline-block;">👍 Nhắn Tin Fanpage LuViet</a>
+   - BẮT BUỘC chèn khối CTA nổi bật dạng hộp bo tròn sang trọng, phối màu nhận diện BNI đẳng cấp (Đỏ Burgundy BNI đặc trưng, Xanh Navy và Vàng Kim):
+     <div style="margin: 35px 0 20px; padding: 28px 24px; background: linear-gradient(135deg, #fff7ed 0%, #fef2f2 50%, #eff6ff 100%); border: 2px solid #dc2626; border-radius: 14px; text-align: center; box-shadow: 0 6px 20px rgba(220, 38, 38, 0.12);">
+       <span style="background: #dc2626; color: #ffffff; font-size: 13px; font-weight: 700; text-transform: uppercase; padding: 4px 14px; border-radius: 20px; letter-spacing: 0.5px;">Cơ Hội Kết Nối Kinh Doanh Độc Quyền</span>
+       <h3 style="color: #991b1b; margin: 15px 0 10px; font-size: 22px; font-weight: 800; line-height: 1.4;">🚀 Bứt Phá Doanh Số & Mở Rộng Quan Hệ Cùng BNI Topaz Chapter Online!</h3>
+       <p style="color: #334155; font-size: 15px; line-height: 1.6; max-width: 720px; margin: 0 auto 22px;">Đừng để doanh nghiệp đơn độc trong thị trường cạnh tranh khốc liệt. Hãy trải nghiệm năng lượng kết nối kinh doanh đỉnh cao theo triết lý "Cho Là Nhận" (Givers Gain) và sở hữu ngay đội ngũ hàng chục chủ doanh nghiệp sẵn sàng giới thiệu khách hàng cho bạn trên toàn quốc!</p>
+       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px;">
+         <a href="{cta_url}" target="_blank" rel="noopener" style="background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); color: #ffffff; font-weight: 700; font-size: 16px; padding: 13px 30px; border-radius: 8px; text-decoration: none; box-shadow: 0 4px 14px rgba(220, 38, 38, 0.35); display: inline-block;">👉 Đăng Ký Tham Dự Giao Lưu BNI Topaz (Miễn Phí)</a>
+         <a href="{cta_url}" target="_blank" rel="noopener" style="background: #1e3a8a; color: #ffffff; font-weight: 700; font-size: 15px; padding: 13px 24px; border-radius: 8px; text-decoration: none; box-shadow: 0 4px 12px rgba(30, 58, 138, 0.25); display: inline-block;">💬 Nhắn Tin Fanpage BNI Topaz Chapter</a>
        </div>
      </div>
 
@@ -299,9 +303,9 @@ CHIẾN LƯỢC NỘI DUNG & ĐIỀU HƯỚNG CHUYỂN ĐỔI (QUAN TRỌNG NH�
    - TIÊU ĐỀ (Title): BẮT BUỘC đặt TỪ KHÓA CHÍNH NGAY Ở ĐẦU TIÊU ĐỀ (dưới 60 ký tự) để Blogger tự động sinh URL slug chuẩn SEO mà không bị cắt cụt. Kích thích lượt click (CTR) cao.
    - SAPO: Mở bài cuốn hút 2-3 đoạn ngắn theo công thức PAS (Problem - Agitate - Solution).
    - THÂN BÀI: Sử dụng thẻ <h2> và <h3> rõ ràng, logic. Luôn dùng danh sách (<ul>, <li>) để thoáng mắt.
-   - BẢNG BIỂU: BẮT BUỘC có 1 Bảng so sánh (HTML <table>) trực quan, viền mỏng chuyên nghiệp (border: 1px solid #cbd5e1).
-   - FAQ: BẮT BUỘC có mục <h2>Câu hỏi thường gặp (FAQ)</h2> với ít nhất 3 câu hỏi thực tế và câu trả lời thấu đáo.
-   - PROMPT TẠO ẢNH: Viết 1 đoạn Prompt tiếng Anh chi tiết, chuyên nghiệp để tạo ảnh Thumbnail 16:9 chất lượng cao.
+   - BẢNG BIỂU: BẮT BUỘC có 1 Bảng so sánh (HTML <table>) trực quan, viền mỏng chuyên nghiệp (border: 1px solid #cbd5e1) làm nổi bật sự vượt trội của BNI Topaz Online so với các phương thức kinh doanh hoặc kết nối truyền thống.
+   - FAQ: BẮT BUỘC có mục <h2>Câu hỏi thường gặp (FAQ)</h2> với ít nhất 3 câu hỏi thực tế về BNI Topaz Chapter Online và câu trả lời thấu đáo.
+   - PROMPT TẠO ẢNH: Viết 1 đoạn Prompt tiếng Anh chi tiết, chuyên nghiệp để tạo ảnh Thumbnail 16:9 chất lượng cao: mô tả các doanh nhân Việt Nam lịch lãm trong trang phục vest công sở, không khí họp kinh doanh trực tuyến hoặc hội trường kết nối doanh nhân sang trọng, gam màu chủ đạo đỏ BNI và xanh navy, ánh sáng ấm áp đẳng cấp.
 
 ĐỊNH DẠNG TRẢ VỀ:
 Hãy trả về DUY NHẤT một chuỗi JSON hợp lệ (không kèm theo bất kỳ văn bản giải thích nào ngoài JSON) theo cấu trúc:
@@ -309,7 +313,7 @@ Hãy trả về DUY NHẤT một chuỗi JSON hợp lệ (không kèm theo bất
   "title": "Tiêu đề bài viết dưới 65 ký tự",
   "labels": ["Nhãn 1", "Nhãn 2"],
   "metaDescription": "Mô tả tìm kiếm tóm tắt dưới 155 ký tự chuẩn SEO",
-  "imagePrompt": "English prompt for 16:9 thumbnail image...",
+  "imagePrompt": "English prompt for 16:9 thumbnail image featuring professional Vietnamese business executives networking, BNI corporate red and navy palette...",
   "content": "<div class='seo-post-content'><p>...</p><h2>...</h2>...</div>"
 }}
 """
