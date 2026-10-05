@@ -228,12 +228,97 @@ Hãy trả về DUY NHẤT một chuỗi JSON hợp lệ (không kèm theo bất
 }}
 """
 
+def robust_json_decode(raw_text):
+    """
+    Giải mã JSON bài viết từ phản hồi của Google Gemini một cách an toàn và chống lỗi syntax.
+    Tự động xử lý trường hợp markdown backticks, unescaped quotes, và HTML tags bên trong chuỗi.
+    """
+    cleaned = raw_text.strip()
+    if cleaned.startswith("```json"):
+        cleaned = cleaned[7:]
+    elif cleaned.startswith("```"):
+        cleaned = cleaned[3:]
+    if cleaned.endswith("```"):
+        cleaned = cleaned[:-3]
+    cleaned = cleaned.strip()
+
+    # 1. Thử giải mã chuẩn bằng json.loads (strict=False bỏ qua các ký tự điều khiển)
+    try:
+        data = json.loads(cleaned, strict=False)
+        if isinstance(data, dict) and data.get("title") and (data.get("content") or data.get("metaDescription")):
+            return data
+    except Exception:
+        pass
+
+    # 2. Thử cắt vùng nằm giữa cặp dấu ngoặc nhọn ngoài cùng { ... }
+    first_brace = cleaned.find('{')
+    last_brace = cleaned.rfind('}')
+    if first_brace != -1 and last_brace != -1 and last_brace > first_brace:
+        snippet = cleaned[first_brace:last_brace+1]
+        try:
+            data = json.loads(snippet, strict=False)
+            if isinstance(data, dict) and data.get("title") and (data.get("content") or data.get("metaDescription")):
+                return data
+        except Exception:
+            pass
+
+    # 3. Khôi phục bằng Regex bóc tách từng trường (Cứu nguy khi AI xuất unescaped quotes trong content HTML)
+    try:
+        import re
+        data = {}
+        m_title = re.search(r'"title"\s*:\s*"((?:[^"\\]|\\.)*)"', cleaned)
+        if m_title:
+            data['title'] = m_title.group(1).replace(r'\"', '"').replace(r'\n', ' ').strip()
+
+        m_labels = re.search(r'"labels"\s*:\s*\[(.*?)\]', cleaned, re.DOTALL)
+        if m_labels:
+            raw_labels = m_labels.group(1)
+            data['labels'] = [lbl.strip().strip('"\'') for lbl in raw_labels.split(',') if lbl.strip().strip('"\'')]
+
+        m_meta = re.search(r'"metaDescription"\s*:\s*"((?:[^"\\]|\\.)*)"', cleaned)
+        if m_meta:
+            data['metaDescription'] = m_meta.group(1).replace(r'\"', '"').replace(r'\n', ' ').strip()
+
+        m_img = re.search(r'"imagePrompt"\s*:\s*"((?:[^"\\]|\\.)*)"', cleaned)
+        if m_img:
+            data['imagePrompt'] = m_img.group(1).replace(r'\"', '"').replace(r'\n', ' ').strip()
+
+        content_idx = cleaned.find('"content"')
+        if content_idx != -1:
+            colon_idx = cleaned.find(':', content_idx)
+            if colon_idx != -1:
+                start_quote = cleaned.find('"', colon_idx)
+                if start_quote != -1:
+                    raw_content = cleaned[start_quote+1:]
+                    last_q = raw_content.rfind('"\n}')
+                    if last_q == -1:
+                        last_q = raw_content.rfind('"}')
+                    if last_q == -1:
+                        last_q = raw_content.rfind('"')
+                    
+                    if last_q != -1:
+                        c_str = raw_content[:last_q]
+                    else:
+                        c_str = raw_content
+
+                    c_str = c_str.replace('\\"', '"').replace('\\n', '\n').replace('\\t', '\t').replace('\\/', '/')
+                    data['content'] = c_str
+
+        if data.get('title') and (data.get('content') or data.get('metaDescription')):
+            return data
+    except Exception as e_repair:
+        print(f"⚠️ Quá trình bóc tách regex JSON gặp lỗi: {e_repair}")
+
+    return json.loads(cleaned)
+
+
     models = [
+        'gemini-3.8-flash',
         'gemini-2.5-flash',
-        'gemini-2.0-flash',
-        'gemini-1.5-flash',
-        'gemini-2.5-flash-lite',
-        'gemini-flash-latest'
+        'gemini-3.5-flash-lite',
+        'gemini-2.5-pro',
+        'gemini-flash-latest',
+        'gemini-pro-latest'
     ]
     last_err = None
 
@@ -269,7 +354,12 @@ Hãy trả về DUY NHẤT một chuỗi JSON hợp lệ (không kèm theo bất
 
                     resp = requests.post(url, json=body, timeout=120)
 
-                    # 1. Xử lý lỗi tạm thời HTTP 503 (Spike in demand / UNAVAILABLE)
+                    # 1. Model không hỗ trợ hoặc đã bị nâng cấp (HTTP 404) -> Chuyển ngay model kế tiếp, không tốn thời gian chờ
+                    if resp.status_code == 404:
+                        print(f"ℹ️ Model {model} không hỗ trợ trên tài khoản này (HTTP 404). Chuyển sang model kế tiếp...")
+                        break
+
+                    # 2. Xử lý lỗi tạm thời HTTP 503 (Spike in demand / UNAVAILABLE)
                     if resp.status_code == 503 or "UNAVAILABLE" in resp.text:
                         if attempt < max_attempts:
                             wait_sec = retry_delays[attempt - 1]
@@ -281,7 +371,7 @@ Hãy trả về DUY NHẤT một chuỗi JSON hợp lệ (không kèm theo bất
                             last_err = Exception(f"HTTP 503: {resp.text}")
                             break
 
-                    # 2. Xử lý lỗi HTTP 429 (Hết hạn mức / RESOURCE_EXHAUSTED)
+                    # 3. Xử lý lỗi HTTP 429 (Hết hạn mức / RESOURCE_EXHAUSTED)
                     if resp.status_code == 429 or "RESOURCE_EXHAUSTED" in resp.text:
                         print(f"⚠️ API Key #{key_idx} gặp sự cố quá tải / hết lượt gọi (HTTP 429 / Quota Exceeded).")
                         key_overloaded = True
@@ -292,24 +382,34 @@ Hãy trả về DUY NHẤT một chuỗi JSON hợp lệ (không kèm theo bất
                         raise Exception(f"HTTP {resp.status_code}: {resp.text}")
 
                     res_json = resp.json()
-                    raw_text = res_json['candidates'][0]['content']['parts'][0]['text']
+                    candidates = res_json.get('candidates', [])
+                    if not candidates:
+                        raise Exception(f"Google AI không trả về candidate nào: {resp.text}")
+                    parts = candidates[0].get('content', {}).get('parts', [])
+                    if not parts:
+                        raise Exception(f"Google AI không trả về nội dung text: {resp.text}")
+                    raw_text = parts[0].get('text', '')
 
-                    # Clean json
-                    cleaned = raw_text.strip()
-                    if cleaned.startswith("```json"):
-                        cleaned = cleaned[7:]
-                    if cleaned.endswith("```"):
-                        cleaned = cleaned[:-3]
-                    cleaned = cleaned.strip()
+                    data = robust_json_decode(raw_text)
+                    if not data.get('title') or not data.get('content'):
+                        raise Exception(f"Dữ liệu bài viết thiếu trường bắt buộc (title/content): {list(data.keys())}")
 
-                    data = json.loads(cleaned)
                     print(f"✅ Gemini AI đã tạo xong bài viết: '{data.get('title')}' thành công với Key #{key_idx} ({model})!")
                     return data
                 except Exception as e:
                     last_err = e
-                    if "503" not in str(e) and "429" not in str(e):
-                        print(f"⚠️ Model {model} gặp sự cố: {e}. Đang thử model kế tiếp...")
-                    break
+                    if "404" in str(e):
+                        print(f"ℹ️ Model {model} không hỗ trợ (HTTP 404). Chuyển sang model tiếp theo...")
+                        break
+                    if "503" in str(e) or "429" in str(e):
+                        break
+                    print(f"⚠️ Lần {attempt}/{max_attempts} với Model {model} gặp sự cố: {e}")
+                    if attempt < max_attempts:
+                        time.sleep(2)
+                        continue
+                    else:
+                        print(f"⚠️ Model {model} thất bại sau {max_attempts} lần thử. Đang chuyển model tiếp theo...")
+                        break
 
             if key_overloaded:
                 break
