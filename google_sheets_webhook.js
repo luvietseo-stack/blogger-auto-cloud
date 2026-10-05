@@ -6,8 +6,9 @@
  * ==============================================================================
  */
 // Cấu hình Telegram Bot (@BotFather) & Chat ID nhóm nhận thông báo
-var TELEGRAM_BOT_TOKEN = "8480459173:AAHhSTEGSCG5zwq1jp6Dtycw97NQ2dqA8QM";
-var TELEGRAM_CHAT_ID = "-5074952407"; // Nhóm Content Luviet
+// LƯU Ý: Để trống TELEGRAM_BOT_TOKEN nếu bạn đã nhận thông báo trực tiếp từ GitHub Actions để tránh bị trùng 2 lần tin nhắn!
+var TELEGRAM_BOT_TOKEN = "";
+var TELEGRAM_CHAT_ID = "";
 
 // Email nhận thông báo: Điền email nhận thông báo báo cáo xuất bản bài viết (để trống nếu không cần)
 var NOTIFICATION_EMAIL = "";
@@ -81,11 +82,13 @@ function doPost(e) {
       }
     }
 
-    // Gửi thông báo đến Telegram
-    try {
-      sendTelegramMessage(topicTitle, statusText, postUrl, publishedTime, labelsStr, matchedRow);
-    } catch (teleErr) {
-      Logger.log("Lỗi gửi Telegram: " + teleErr.toString());
+    // Gửi thông báo đến Telegram (Tự động bỏ qua nếu GitHub Actions đã gửi qua cờ skip_telegram)
+    if (!data.skip_telegram && TELEGRAM_BOT_TOKEN && TELEGRAM_CHAT_ID) {
+      try {
+        sendTelegramMessage(topicTitle, statusText, postUrl, publishedTime, labelsStr, matchedRow);
+      } catch (teleErr) {
+        Logger.log("Lỗi gửi Telegram: " + teleErr.toString());
+      }
     }
 
     // Gửi thông báo đến Email
@@ -125,7 +128,7 @@ function sendTelegramMessage(topic, status, postUrl, publishedTime, labels, rowI
     "⏰ <b>Thời gian:</b> " + publishedTime + "\n" +
     (rowIndex > 0 ? "📊 <b>Google Sheet:</b> Đã cập nhật dòng #" + rowIndex + " (<b>" + status + "</b>)\n" : "") +
     (postUrl ? "🔗 <b>Link bài viết:</b> <a href=\"" + postUrl + "\">Bấm xem ngay</a>\n" : "") +
-    "\n💡 <i>Hệ thống AI Blogger Cloud LuViet đã xử lý hoàn tất!</i>";
+    "\n💡 <i>Hệ thống AI Blogger Cloud BNI Topaz Chapter Online đã xử lý hoàn tất!</i>";
 
   var payload = {
     chat_id: TELEGRAM_CHAT_ID,

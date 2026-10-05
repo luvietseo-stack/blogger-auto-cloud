@@ -727,7 +727,7 @@ def send_telegram_notification(topic, status_text, post_url, published_time, lab
             text += f"📊 <b>Google Sheet:</b> Đã cập nhật dòng #{row_index} (<b>{status_text}</b>)\n"
         if post_url:
             text += f"🔗 <b>Link bài viết:</b> <a href=\"{post_url}\">Bấm xem bài viết ngay</a>\n"
-        text += "\n💡 <i>Hệ thống AI Blogger Cloud LuViet đã xuất bản hoàn tất!</i>"
+        text += "\n💡 <i>Hệ thống AI Blogger Cloud BNI Topaz Chapter Online đã lên lịch/xuất bản hoàn tất!</i>"
 
         payload = {
             "chat_id": TELEGRAM_CHAT_ID,
@@ -785,7 +785,8 @@ def notify_google_sheet(item, result, scheduled_slot=None):
             "post_url": post_url,
             "post_id": result.get('id'),
             "published": pub_time,
-            "labels": result.get('labels', item.get('labels', []))
+            "labels": result.get('labels', item.get('labels', [])),
+            "skip_telegram": True  # Yêu cầu Google Apps Script không gửi Telegram để tránh lặp tin nhắn
         }
         resp = requests.post(GOOGLE_SHEET_WEBHOOK_URL, json=payload, timeout=30)
         if resp.status_code == 200:
