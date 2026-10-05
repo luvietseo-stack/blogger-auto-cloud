@@ -155,79 +155,8 @@ TOPICS_FILE = os.path.join(os.path.dirname(__file__), 'topics.txt')
 HISTORY_FILE = os.path.join(os.path.dirname(__file__), 'posted_history.json')
 
 # ==============================================================================
-# HÀM GỌI GEMINI AI VIẾT BÀI CHUẨN SEO
+# HÀM BÓC TÁCH & GIẢI MÃ JSON AN TOÀN
 # ==============================================================================
-def generate_seo_article(topic, labels, summary='', cta_url=REGISTER_URL):
-    api_keys = get_api_key_pool()
-    if not api_keys:
-        raise Exception("Không tìm thấy Gemini API Key nào hợp lệ!")
-
-    print(f"\n🧠 Đang gọi Google Gemini AI viết bài cho chủ đề: '{topic}'...")
-    print(f"🔑 Số lượng API Key trong hồ chứa (Key Pool): {len(api_keys)}")
-
-    prompt = f"""
-Bạn là chuyên gia Content Marketing, SEO Master và Copywriter hàng đầu Việt Nam. Hãy tạo một bài viết chuẩn SEO chuyên sâu, cấu trúc chặt chẽ, tối ưu tỷ lệ chuyển đổi (CRO) bằng tiếng Việt cho nền tảng Blogger/Blogspot theo các thông số sau:
-
-- Chủ đề / Từ khóa chính: "{topic}"
-- Nhãn chuyên mục mong muốn: "{', '.join(labels)}"
-{f'- Tóm tắt gợi ý / Góc nhìn: "{summary}"' if summary else ''}
-- Liên kết chuyển đổi mục tiêu (BẮT BUỘC): "{cta_url}"
-- Độ dài mục tiêu: Khoảng 1500 - 2000 từ.
-- Tông giọng: Chuyên gia thực chiến, đồng cảm sâu sắc với nỗi đau của người kinh doanh, lập luận sắc sảo, truyền cảm hứng và thôi thúc hành động mạnh mẽ.
-
-CHIẾN LƯỢC NỘI DUNG & ĐIỀU HƯỚNG CHUYỂN ĐỔI (QUAN TRỌNG NHẤT):
-1. ĐỐI TƯỢNG VÀ CHÂN DUNG KHÁCH HÀNG MỤC TIÊU:
-   - Bài viết đánh trúng nỗi đau thực tế của: Chủ shop online bán lẻ (thời trang, mỹ phẩm, mẹ & bé), hộ kinh doanh cá thể, chủ quán cafe/nhà hàng/quán ăn (F&B), chủ cơ sở dịch vụ/spa/nha khoa và doanh nghiệp vừa & nhỏ (SMEs).
-   - Nỗi đau: Chi phí sàn TMĐT tăng cao (18-25%), rủi ro khóa shop mất trắng khách, chi phí quảng cáo đắt đỏ, đơn hàng bị bom do COD, thuê làm website cồng kềnh 10-20 triệu mà không hiệu quả, quản lý đơn hàng thủ công thất thoát data.
-
-2. GIẢI PHÁP ĐỘT PHÁ - NỀN TẢNG AILADI (my.luviet.com):
-   - Định vị AILADI là hệ sinh thái tạo website bán hàng tự động 24/7 và giải pháp chuyển đổi số toàn diện.
-   - Khởi tạo siêu tốc 30 giây không cần biết lập trình (No-Code).
-   - Form đặt hàng 1-chạm (1-Click Checkout) siêu nhanh, tối ưu trải nghiệm khách hàng.
-   - Tích hợp thanh toán VietQR động tự điền số tiền và nội dung, quét app ngân hàng 3 giây tiền về tài khoản ngay, ép tỷ lệ bom hàng về dưới 3%.
-   - Kết nối tự động API 4 hãng vận chuyển lớn (GHTK, GHN, Viettel Post, VNPost), tự tính phí ship đến từng xã/phường, in mã vận đơn A6 trong 1 giây.
-   - Menu QR Code điện tử đặt món tại bàn và giao tận nơi cho ngành F&B, quán cafe, nhà hàng.
-   - Trợ lý AI Gemini 24/7 tự động tư vấn, chốt đơn ca đêm và viết bài SEO.
-   - Cơ sở dữ liệu riêng biệt (Database Per-Tenant) an toàn tuyệt đối 100% doanh thu và dữ liệu khách hàng.
-
-3. ĐIỀU HƯỚNG LIÊN KẾT NỘI BỘ (INTERNAL LINKING - BẮT BUỘC):
-   - Trong thân bài: BẮT BUỘC chèn tự nhiên từ 2 đến 3 liên kết ngữ cảnh (contextual anchor text) dẫn người đọc bấm vào link đích: "{cta_url}".
-   - BẮT BUỘC chèn thêm 1 - 2 liên kết nội bộ tự nhiên đến các trang dịch vụ cột trụ của LuViet khi xuất hiện ngữ cảnh tương ứng:
-     + Khi đề cập đến dịch vụ thiết kế web chuyên nghiệp: <a href="https://www.luviet.com/p/thiet-ke-website-tron-goi.html" target="_blank">dịch vụ thiết kế website trọn gói</a>
-     + Khi đề cập đến chi phí/báo giá làm web: <a href="https://www.luviet.com/p/bang-gia-thiet-ke-website-tron-goi-tai.html" target="_blank">bảng giá thiết kế website LuViet</a>
-     + Khi đề cập đến khách hàng/doanh nghiệp khu vực Đồng Nai, Biên Hòa: <a href="https://www.luviet.com/p/dich-vu-thiet-ke-website-dong-nai.html" target="_blank">thiết kế website tại Đồng Nai</a>
-
-4. KHỐI CALL TO ACTION (CTA) ĐẲNG CẤP Ở CUỐI BÀI:
-   - BẮT BUỘC chèn khối CTA nổi bật dạng hộp viền nổi, màu sắc bắt mắt, tối ưu tỷ lệ nhấp chuột (CRO):
-     <div style="margin: 35px 0 20px; padding: 25px; background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%); border: 2px solid #0284c7; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(2, 132, 199, 0.15);">
-       <h3 style="color: #0369a1; margin-top: 0; font-size: 20px; font-weight: 700;">🚀 Bắt Đầu Đột Phá Doanh Số Bán Hàng Cùng AILADI Ngay Hôm Nay!</h3>
-       <p style="color: #334155; font-size: 15px; line-height: 1.6; margin-bottom: 20px;">Đừng để chi phí sàn và quy trình thủ công bào mòn lợi nhuận của bạn. Sở hữu ngay website bán hàng đa kênh tự động trong 30 giây – Miễn phí khởi tạo, không cần biết code, đồng bộ đơn hàng và thanh toán VietQR tức thì.</p>
-       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
-         <a href="{cta_url}" target="_blank" rel="noopener" style="background: #2563eb; color: #ffffff; font-weight: bold; font-size: 16px; padding: 12px 28px; border-radius: 8px; text-decoration: none; box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35); display: inline-block;">👉 Đăng Ký Tạo Website Miễn Phí Tại Đây</a>
-         <a href="{ZALO_URL}" target="_blank" rel="nofollow" style="background: #0068ff; color: #ffffff; font-weight: bold; font-size: 15px; padding: 12px 20px; border-radius: 8px; text-decoration: none; display: inline-block;">💬 Hỗ Trợ Kỹ Thuật Zalo OA</a>
-         <a href="{FANPAGE_URL}" target="_blank" rel="nofollow" style="background: #1877f2; color: #ffffff; font-weight: bold; font-size: 15px; padding: 12px 20px; border-radius: 8px; text-decoration: none; display: inline-block;">👍 Nhắn Tin Fanpage LuViet</a>
-       </div>
-     </div>
-
-5. CẤU TRÚC BÀI VIẾT (BẮT BUỘC):
-   - TIÊU ĐỀ (Title): BẮT BUỘC đặt TỪ KHÓA CHÍNH NGAY Ở ĐẦU TIÊU ĐỀ (dưới 60 ký tự) để Blogger tự động sinh URL slug chuẩn SEO mà không bị cắt cụt. Kích thích lượt click (CTR) cao.
-   - SAPO: Mở bài cuốn hút 2-3 đoạn ngắn theo công thức PAS (Problem - Agitate - Solution).
-   - THÂN BÀI: Sử dụng thẻ <h2> và <h3> rõ ràng, logic. Luôn dùng danh sách (<ul>, <li>) để thoáng mắt.
-   - BẢNG BIỂU: BẮT BUỘC có 1 Bảng so sánh (HTML <table>) trực quan, viền mỏng chuyên nghiệp (border: 1px solid #cbd5e1).
-   - FAQ: BẮT BUỘC có mục <h2>Câu hỏi thường gặp (FAQ)</h2> với ít nhất 3 câu hỏi thực tế và câu trả lời thấu đáo.
-   - PROMPT TẠO ẢNH: Viết 1 đoạn Prompt tiếng Anh chi tiết, chuyên nghiệp để tạo ảnh Thumbnail 16:9 chất lượng cao.
-
-ĐỊNH DẠNG TRẢ VỀ:
-Hãy trả về DUY NHẤT một chuỗi JSON hợp lệ (không kèm theo bất kỳ văn bản giải thích nào ngoài JSON) theo cấu trúc:
-{{
-  "title": "Tiêu đề bài viết dưới 65 ký tự",
-  "labels": ["Nhãn 1", "Nhãn 2"],
-  "metaDescription": "Mô tả tìm kiếm tóm tắt dưới 155 ký tự chuẩn SEO",
-  "imagePrompt": "English prompt for 16:9 thumbnail image...",
-  "content": "<div class='seo-post-content'><p>...</p><h2>...</h2>...</div>"
-}}
-"""
-
 def robust_json_decode(raw_text):
     """
     Giải mã JSON bài viết từ phản hồi của Google Gemini một cách an toàn và chống lỗi syntax.
@@ -311,6 +240,79 @@ def robust_json_decode(raw_text):
 
     return json.loads(cleaned)
 
+# ==============================================================================
+# HÀM GỌI GEMINI AI VIẾT BÀI CHUẨN SEO
+# ==============================================================================
+def generate_seo_article(topic, labels, summary='', cta_url=REGISTER_URL):
+    api_keys = get_api_key_pool()
+    if not api_keys:
+        raise Exception("Không tìm thấy Gemini API Key nào hợp lệ!")
+
+    print(f"\n🧠 Đang gọi Google Gemini AI viết bài cho chủ đề: '{topic}'...")
+    print(f"🔑 Số lượng API Key trong hồ chứa (Key Pool): {len(api_keys)}")
+
+    prompt = f"""
+Bạn là chuyên gia Content Marketing, SEO Master và Copywriter hàng đầu Việt Nam. Hãy tạo một bài viết chuẩn SEO chuyên sâu, cấu trúc chặt chẽ, tối ưu tỷ lệ chuyển đổi (CRO) bằng tiếng Việt cho nền tảng Blogger/Blogspot theo các thông số sau:
+
+- Chủ đề / Từ khóa chính: "{topic}"
+- Nhãn chuyên mục mong muốn: "{', '.join(labels)}"
+{f'- Tóm tắt gợi ý / Góc nhìn: "{summary}"' if summary else ''}
+- Liên kết chuyển đổi mục tiêu (BẮT BUỘC): "{cta_url}"
+- Độ dài mục tiêu: Khoảng 1500 - 2000 từ.
+- Tông giọng: Chuyên gia thực chiến, đồng cảm sâu sắc với nỗi đau của người kinh doanh, lập luận sắc sảo, truyền cảm hứng và thôi thúc hành động mạnh mẽ.
+
+CHIẾN LƯỢC NỘI DUNG & ĐIỀU HƯỚNG CHUYỂN ĐỔI (QUAN TRỌNG NHẤT):
+1. ĐỐI TƯỢNG VÀ CHÂN DUNG KHÁCH HÀNG MỤC TIÊU:
+   - Bài viết đánh trúng nỗi đau thực tế của: Chủ shop online bán lẻ (thời trang, mỹ phẩm, mẹ & bé), hộ kinh doanh cá thể, chủ quán cafe/nhà hàng/quán ăn (F&B), chủ cơ sở dịch vụ/spa/nha khoa và doanh nghiệp vừa & nhỏ (SMEs).
+   - Nỗi đau: Chi phí sàn TMĐT tăng cao (18-25%), rủi ro khóa shop mất trắng khách, chi phí quảng cáo đắt đỏ, đơn hàng bị bom do COD, thuê làm website cồng kềnh 10-20 triệu mà không hiệu quả, quản lý đơn hàng thủ công thất thoát data.
+
+2. GIẢI PHÁP ĐỘT PHÁ - NỀN TẢNG AILADI (my.luviet.com):
+   - Định vị AILADI là hệ sinh thái tạo website bán hàng tự động 24/7 và giải pháp chuyển đổi số toàn diện.
+   - Khởi tạo siêu tốc 30 giây không cần biết lập trình (No-Code).
+   - Form đặt hàng 1-chạm (1-Click Checkout) siêu nhanh, tối ưu trải nghiệm khách hàng.
+   - Tích hợp thanh toán VietQR động tự điền số tiền và nội dung, quét app ngân hàng 3 giây tiền về tài khoản ngay, ép tỷ lệ bom hàng về dưới 3%.
+   - Kết nối tự động API 4 hãng vận chuyển lớn (GHTK, GHN, Viettel Post, VNPost), tự tính phí ship đến từng xã/phường, in mã vận đơn A6 trong 1 giây.
+   - Menu QR Code điện tử đặt món tại bàn và giao tận nơi cho ngành F&B, quán cafe, nhà hàng.
+   - Trợ lý AI Gemini 24/7 tự động tư vấn, chốt đơn ca đêm và viết bài SEO.
+   - Cơ sở dữ liệu riêng biệt (Database Per-Tenant) an toàn tuyệt đối 100% doanh thu và dữ liệu khách hàng.
+
+3. ĐIỀU HƯỚNG LIÊN KẾT NỘI BỘ (INTERNAL LINKING - BẮT BUỘC):
+   - Trong thân bài: BẮT BUỘC chèn tự nhiên từ 2 đến 3 liên kết ngữ cảnh (contextual anchor text) dẫn người đọc bấm vào link đích: "{cta_url}".
+   - BẮT BUỘC chèn thêm 1 - 2 liên kết nội bộ tự nhiên đến các trang dịch vụ cột trụ của LuViet khi xuất hiện ngữ cảnh tương ứng:
+     + Khi đề cập đến dịch vụ thiết kế web chuyên nghiệp: <a href="https://www.luviet.com/p/thiet-ke-website-tron-goi.html" target="_blank">dịch vụ thiết kế website trọn gói</a>
+     + Khi đề cập đến chi phí/báo giá làm web: <a href="https://www.luviet.com/p/bang-gia-thiet-ke-website-tron-goi-tai.html" target="_blank">bảng giá thiết kế website LuViet</a>
+     + Khi đề cập đến khách hàng/doanh nghiệp khu vực Đồng Nai, Biên Hòa: <a href="https://www.luviet.com/p/dich-vu-thiet-ke-website-dong-nai.html" target="_blank">thiết kế website tại Đồng Nai</a>
+
+4. KHỐI CALL TO ACTION (CTA) ĐẲNG CẤP Ở CUỐI BÀI:
+   - BẮT BUỘC chèn khối CTA nổi bật dạng hộp viền nổi, màu sắc bắt mắt, tối ưu tỷ lệ nhấp chuột (CRO):
+     <div style="margin: 35px 0 20px; padding: 25px; background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%); border: 2px solid #0284c7; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(2, 132, 199, 0.15);">
+       <h3 style="color: #0369a1; margin-top: 0; font-size: 20px; font-weight: 700;">🚀 Bắt Đầu Đột Phá Doanh Số Bán Hàng Cùng AILADI Ngay Hôm Nay!</h3>
+       <p style="color: #334155; font-size: 15px; line-height: 1.6; margin-bottom: 20px;">Đừng để chi phí sàn và quy trình thủ công bào mòn lợi nhuận của bạn. Sở hữu ngay website bán hàng đa kênh tự động trong 30 giây – Miễn phí khởi tạo, không cần biết code, đồng bộ đơn hàng và thanh toán VietQR tức thì.</p>
+       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
+         <a href="{cta_url}" target="_blank" rel="noopener" style="background: #2563eb; color: #ffffff; font-weight: bold; font-size: 16px; padding: 12px 28px; border-radius: 8px; text-decoration: none; box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35); display: inline-block;">👉 Đăng Ký Tạo Website Miễn Phí Tại Đây</a>
+         <a href="{ZALO_URL}" target="_blank" rel="nofollow" style="background: #0068ff; color: #ffffff; font-weight: bold; font-size: 15px; padding: 12px 20px; border-radius: 8px; text-decoration: none; display: inline-block;">💬 Hỗ Trợ Kỹ Thuật Zalo OA</a>
+         <a href="{FANPAGE_URL}" target="_blank" rel="nofollow" style="background: #1877f2; color: #ffffff; font-weight: bold; font-size: 15px; padding: 12px 20px; border-radius: 8px; text-decoration: none; display: inline-block;">👍 Nhắn Tin Fanpage LuViet</a>
+       </div>
+     </div>
+
+5. CẤU TRÚC BÀI VIẾT (BẮT BUỘC):
+   - TIÊU ĐỀ (Title): BẮT BUỘC đặt TỪ KHÓA CHÍNH NGAY Ở ĐẦU TIÊU ĐỀ (dưới 60 ký tự) để Blogger tự động sinh URL slug chuẩn SEO mà không bị cắt cụt. Kích thích lượt click (CTR) cao.
+   - SAPO: Mở bài cuốn hút 2-3 đoạn ngắn theo công thức PAS (Problem - Agitate - Solution).
+   - THÂN BÀI: Sử dụng thẻ <h2> và <h3> rõ ràng, logic. Luôn dùng danh sách (<ul>, <li>) để thoáng mắt.
+   - BẢNG BIỂU: BẮT BUỘC có 1 Bảng so sánh (HTML <table>) trực quan, viền mỏng chuyên nghiệp (border: 1px solid #cbd5e1).
+   - FAQ: BẮT BUỘC có mục <h2>Câu hỏi thường gặp (FAQ)</h2> với ít nhất 3 câu hỏi thực tế và câu trả lời thấu đáo.
+   - PROMPT TẠO ẢNH: Viết 1 đoạn Prompt tiếng Anh chi tiết, chuyên nghiệp để tạo ảnh Thumbnail 16:9 chất lượng cao.
+
+ĐỊNH DẠNG TRẢ VỀ:
+Hãy trả về DUY NHẤT một chuỗi JSON hợp lệ (không kèm theo bất kỳ văn bản giải thích nào ngoài JSON) theo cấu trúc:
+{{
+  "title": "Tiêu đề bài viết dưới 65 ký tự",
+  "labels": ["Nhãn 1", "Nhãn 2"],
+  "metaDescription": "Mô tả tìm kiếm tóm tắt dưới 155 ký tự chuẩn SEO",
+  "imagePrompt": "English prompt for 16:9 thumbnail image...",
+  "content": "<div class='seo-post-content'><p>...</p><h2>...</h2>...</div>"
+}}
+"""
 
     models = [
         'gemini-3.8-flash',
