@@ -1,0 +1,83 @@
+name: 🚀 Blogger Gemini AI Auto-Poster Cloud
+
+on:
+  schedule:
+    # Tự động chạy định kỳ mỗi 20 phút một lần (chu kỳ 20 phút / bài)
+    # Tự động lấy đề tài tiếp theo từ Google Sheets và lên lịch vào 3 khung giờ vàng (06:30, 11:30, 14:30)
+    - cron: '*/20 * * * *'
+
+  # Cho phép bấm nút "Run workflow" để chạy thủ công bất kỳ lúc nào trên web GitHub
+  workflow_dispatch:
+    inputs:
+      posts_count:
+        description: 'Số lượng bài viết muốn tạo & lên lịch'
+        required: true
+        default: '1'
+        type: choice
+        options:
+          - '1'
+          - '2'
+          - '3'
+          - '6'
+          - '9'
+      post_mode:
+        description: 'Chế độ phát hành'
+        required: true
+        default: 'schedule'
+        type: choice
+        options:
+          - 'schedule'
+          - 'publish'
+          - 'draft'
+      delay_seconds:
+        description: 'Thời gian nghỉ giữa các bài (giây)'
+        required: false
+        default: '15'
+
+permissions:
+  contents: write
+
+jobs:
+  auto_post:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Tải mã nguồn từ Repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Cài đặt môi trường Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: 📦 Cài đặt thư viện phụ thuộc
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 🚀 Chạy kịch bản Viết bài & Đăng lên Blogger
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS || '' }}
+          BLOGGER_BLOG_ID: ${{ secrets.BLOGGER_BLOG_ID }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+          GOOGLE_SHEET_URL: ${{ secrets.GOOGLE_SHEET_URL || vars.GOOGLE_SHEET_URL || '' }}
+          GOOGLE_SHEET_WEBHOOK_URL: ${{ secrets.GOOGLE_SHEET_WEBHOOK_URL || vars.GOOGLE_SHEET_WEBHOOK_URL || '' }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN || '8480459173:AAHhSTEGSCG5zwq1jp6Dtycw97NQ2dqA8QM' }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || '-5074952407' }}
+          POST_MODE: ${{ github.event.inputs.post_mode || vars.POST_MODE || 'schedule' }}
+          POSTS_COUNT: ${{ github.event.inputs.posts_count || vars.POSTS_COUNT || '1' }}
+          DELAY_SECONDS: ${{ github.event.inputs.delay_seconds || vars.DELAY_SECONDS || '15' }}
+          INDEXING_SERVICE_ACCOUNT_JSON: ${{ secrets.INDEXING_SERVICE_ACCOUNT_JSON || '' }}
+        run: |
+          python main.py
+
+      - name: 💾 Tự động lưu lịch sử bài đã đăng (Git Commit & Push)
+        run: |
+          git config --global user.name "Blogger Bot (GitHub Actions)"
+          git config --global user.email "bot@blogger-gemini.local"
+          git add posted_history.json thumbnails/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Tự động cập nhật lịch sử bài đăng & thumbnail [skip ci]" && git push)

@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hướng Dẫn Cài Đặt Hệ Thống Tự Động Hóa Blogger AI Đám Mây Toàn Diện</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --primary-light: #eff6ff;
+      --accent: #059669;
+      --accent-light: #ecfdf5;
+      --warning: #d97706;
+      --warning-light: #fffbeb;
+      --danger: #dc2626;
+      --danger-light: #fef2f2;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-sub: #64748b;
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --border: #e2e8f0;
+      --border-focus: #94a3b8;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.07);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.08);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Header & Hero */
+    .hero-banner {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      padding: 50px 20px 40px;
+      text-align: center;
+      position: relative;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 16px;
+      background: var(--primary-light);
+      color: var(--primary);
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      border: 1px solid #bfdbfe;
+    }
+
+    .hero-title {
+      font-size: 34px;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.3;
+      max-width: 860px;
+      margin: 0 auto 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-desc {
+      font-size: 18px;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin: 0 auto 24px;
+    }
+
+    .meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      font-size: 14px;
+      color: var(--text-sub);
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Layout */
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    /* Video Section */
+    .video-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 40px;
+    }
+
+    .section-heading-sm {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 16px;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: #0f172a;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .play-btn-mock {
+      width: 68px;
+      height: 68px;
+      background: #ef4444;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 20px rgba(239, 68, 68, 0.4);
+    }
+
+    .play-btn-mock svg {
+      width: 28px;
+      height: 28px;
+      fill: #ffffff;
+      margin-left: 4px;
+    }
+
+    /* Quick Roadmap Checklist */
+    .roadmap-box {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      margin-bottom: 40px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .roadmap-title {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: var(--text-main);
+    }
+
+    .roadmap-desc {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .checklist-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      background: var(--bg-page);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text-main);
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s ease;
+    }
+
+    .check-item:hover {
+      background: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .check-item input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--primary);
+      cursor: pointer;
+    }
+
+    /* Steps Architecture */
+    .step-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      margin-bottom: 36px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+
+    .step-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 46px;
+      height: 46px;
+      background: var(--primary);
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 20px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+    }
+
+    .step-title-wrap h3 {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+
+    .step-title-wrap p {
+      font-size: 15px;
+      color: var(--text-sub);
+    }
+
+    .step-content p, .step-content li {
+      font-size: 15.5px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .step-content ol, .step-content ul {
+      margin-left: 24px;
+      margin-bottom: 20px;
+    }
+
+    .step-content li {
+      margin-bottom: 10px;
+    }
+
+    .step-content strong {
+      color: var(--text-main);
+      font-weight: 700;
+    }
+
+    /* Image Placeholders */
+    .image-placeholder-box {
+      margin: 24px 0 28px;
+      border: 2px dashed #cbd5e1;
+      background: #f8fafc;
+      border-radius: var(--radius-md);
+      padding: 24px 20px;
+      text-align: center;
+      transition: border-color 0.2s;
+    }
+
+    .image-placeholder-box:hover {
+      border-color: var(--primary);
+    }
+
+    .placeholder-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      background: #e2e8f0;
+      color: #475569;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 9999px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .placeholder-icon {
+      margin-bottom: 8px;
+      color: #94a3b8;
+    }
+
+    .placeholder-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .placeholder-desc {
+      font-size: 13.5px;
+      color: var(--text-sub);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Callout Alerts */
+    .alert-box {
+      display: flex;
+      gap: 14px;
+      padding: 18px 20px;
+      border-radius: var(--radius-md);
+      margin: 20px 0;
+      font-size: 14.5px;
+      line-height: 1.6;
+    }
+
+    .alert-info {
+      background: var(--primary-light);
+      border: 1px solid #bfdbfe;
+      color: #1e40af;
+    }
+
+    .alert-success {
+      background: var(--accent-light);
+      border: 1px solid #a7f3d0;
+      color: #065f46;
+    }
+
+    .alert-warning {
+      background: var(--warning-light);
+      border: 1px solid #fde68a;
+      color: #92400e;
+    }
+
+    .alert-danger {
+      background: var(--danger-light);
+      border: 1px solid #fecaca;
+      color: #991b1b;
+    }
+
+    .alert-icon {
+      flex-shrink: 0;
+      font-size: 20px;
+    }
+
+    /* Code Snippets */
+    .code-wrapper {
+      background: #0f172a;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin: 18px 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .code-topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      background: #1e293b;
+      border-bottom: 1px solid #334155;
+      font-size: 13px;
+      color: #94a3b8;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .copy-btn {
+      background: #334155;
+      border: 1px solid #475569;
+      color: #f8fafc;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+
+    .copy-btn:hover {
+      background: var(--primary);
+      border-color: var(--primary);
+    }
+
+    pre code {
+      display: block;
+      padding: 16px 20px;
+      color: #e2e8f0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13.5px;
+      overflow-x: auto;
+      line-height: 1.6;
+    }
+
+    .inline-code {
+      background: #f1f5f9;
+      color: #be185d;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      border: 1px solid #e2e8f0;
+    }
+
+    /* Secret Table */
+    .table-container {
+      overflow-x: auto;
+      margin: 20px 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14.5px;
+    }
+
+    th {
+      background: #f1f5f9;
+      color: var(--text-main);
+      padding: 12px 16px;
+      font-weight: 700;
+      border-bottom: 1px solid var(--border);
+    }
+
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-muted);
+      vertical-align: top;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background: #fafafa;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid var(--border);
+      background: #ffffff;
+      color: var(--text-sub);
+      font-size: 14px;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title { font-size: 26px; }
+      .hero-desc { font-size: 16px; }
+      .step-card { padding: 24px 18px; }
+      .step-header { flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Hero Header -->
+  <header class="hero-banner">
+    <div class="badge-pill">
+      <span>🚀 Phiên bản 2026</span> • Dành Cho Người Không Rành Kỹ Thuật
+    </div>
+    <h1 class="hero-title">Hướng Dẫn Cài Đặt Hệ Thống Tự Động Hóa Blogger AI Đám Mây Toàn Diện</h1>
+    <p class="hero-desc">Tự động lấy đề tài từ Google Sheets ➔ Gemini AI viết bài SEO & thiết kế Thumbnail Doanh Nhân ➔ Đăng bài theo 3 khung giờ vàng ➔ Lập chỉ mục Google Indexing siêu tốc ➔ Báo cáo Telegram nhóm.</p>
+    <div class="meta-bar">
+      <div class="meta-item">⏱️ Thời gian cài đặt: <b>15 - 20 phút</b></div>
+      <div class="meta-item">☁️ Nền tảng: <b>GitHub Actions (Miễn phí 100%)</b></div>
+      <div class="meta-item">💻 Yêu cầu: <b>Chỉ cần trình duyệt web (Không cần bật máy tính)</b></div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- 1. VIDEO HUONG DAN -->
+    <section class="video-card">
+      <div class="section-heading-sm">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+        Video Hướng Dẫn Chi Tiết Từng Bước (Cầm Tay Chỉ Việc)
+      </div>
+
+      <!-- Khung Video YouTube Placeholder (Thay link nhúng vào src bên dưới khi có video) -->
+      <div class="video-wrapper">
+        <!-- Khi có link Youtube thực tế, bạn chỉ cần mở comment thẻ iframe này và thay YOUR_VIDEO_ID:
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Hướng dẫn cài đặt Blogger Auto Cloud" allowfullscreen></iframe>
+        -->
+        <div class="video-placeholder">
+          <div class="play-btn-mock">
+            <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </div>
+          <h4 style="font-size: 18px; margin-bottom: 6px;">Khu Vực Video YouTube Hướng Dẫn Trực Quan</h4>
+          <p style="font-size: 14px; opacity: 0.8; max-width: 480px;">Dán mã nhúng iframe của YouTube vào file này để hiển thị clip hướng dẫn từng thao tác click chuột.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CHECKLIST LO TRINH -->
+    <section class="roadmap-box">
+      <h2 class="roadmap-title">📋 Lộ Trình 9 Bước Cài Đặt (Đánh dấu khi hoàn thành)</h2>
+      <p class="roadmap-desc">Bạn chỉ cần làm một lần duy nhất. Sau đó hệ thống sẽ tự chạy trên mây 24/7 mãi mãi mà không tốn tiền thuê máy chủ.</p>
+      
+      <div class="checklist-grid">
+        <label class="check-item"><input type="checkbox"> Bước 1: Chuẩn bị Blogger & Lấy Blog ID</label>
+        <label class="check-item"><input type="checkbox"> Bước 2: Bật Blogger API & Lấy Refresh Token</label>
+        <label class="check-item"><input type="checkbox"> Bước 3: Lấy Google Gemini API Key</label>
+        <label class="check-item"><input type="checkbox"> Bước 4: Tạo Telegram Bot & Nhóm Báo Cáo</label>
+        <label class="check-item"><input type="checkbox"> Bước 5: Cấu hình Bảng Tính Google Sheets</label>
+        <label class="check-item"><input type="checkbox"> Bước 6: Cài Google Indexing API (Lập chỉ mục)</label>
+        <label class="check-item"><input type="checkbox"> Bước 7: Đưa Toàn Bộ Thư Mục Lên GitHub</label>
+        <label class="check-item"><input type="checkbox"> Bước 8: Cấp Quyền Ghi & Nhập GitHub Secrets</label>
+        <label class="check-item"><input type="checkbox"> Bước 9: Bấm Chạy Thử & Tận Hưởng Thành Quả</label>
+      </div>
+    </section>
+
+    <!-- ==================== BUOC 1 ==================== -->
+    <article class="step-card">
+      <div class="step-header">
+        <div class="step-num">01</div>
+        <div class="step-title-wrap">
+          <h3>Chuẩn Bị Trang Blogger Mới & Lấy Blog ID</h3>
+          <p>Tìm mã định danh duy nhất của blog của bạn để phần mềm biết cần đăng bài vào đâu.</p>
+        </div>
+      </div>
+
+      <div class="step-content">
+        <ol>
+          <li>Truy cập vào trang quản trị Blogger: <a href="https://www.blogger.com" target="_blank">https://www.blogger.com</a>.</li>
+          <li>Tạo một blog mới (nếu chưa có) hoặc chọn đúng blog bạn muốn tự động hóa.</li>
+          <li>Nhìn lên thanh địa chỉ của trình duyệt web (URL), bạn sẽ thấy một dãy số dài ở sau chữ <span class="inline-code">/blog/posts/</span> hoặc <span class="inline-code">/blog/settings/</span>.</li>
+          <li>Dãy số đó chính là <strong>BLOGGER_BLOG_ID</strong> của bạn. Hãy copy dãy số này lưu vào Notepad.</li>
+        </ol>
+
+        <!-- Image Placeholder 1 -->
+        <div class="image-placeholder-box">
+          <span class="placeholder-badge">Ảnh minh họa 01</span>
+          <div class="placeholder-icon">
+            <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+          </div>
+          <div class="placeholder-title">Vị Trí Lấy Blogger Blog ID Trên Thanh URL Trình Duyệt</div>
+          <div class="placeholder-desc">(Chụp ảnh màn hình thanh URL có khoanh đỏ dãy số Blog ID dạng: https://www.blogger.com/blog/posts/<b>88421839210948210</b>)</div>
+        </div>
+
+        <div class="alert-box alert-info">
+          <div class="alert-icon">💡</div>
+          <div><strong>Mẹo:</strong> Nếu thanh địa chỉ hiển thị <span class="inline-code">https://www.blogger.com/blog/posts/1444221897689962852</span> thì Blog ID của bạn chính là: <span class="inline-code">1444221897689962852</span>.</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ==================== BUOC 2 ==================== -->
+    <article class="step-card">
+      <div class="step-header">
+        <div class="step-num">02</div>
+        <div class="step-title-wrap">
+          <h3>Bật Blogger API & Lấy Google OAuth (Client ID, Secret, Refresh Token)</h3>
+          <p>Cấp quyền cho robot thay mặt bạn đăng bài và đặt lịch hẹn giờ lên Blogger.</p>
+        </div>
+      </div>
+
+      <div class="step-content">
+        <ol>
+          <li>Truy cập <strong>Google Cloud Console</strong>: <a href="https://console.cloud.google.com" target="_blank">https://console.cloud.google.com</a> và đăng nhập cùng tài khoản quản lý blog.</li>
+          <li>Bấm <strong>Select a project</strong> (Chọn dự án) ➔ <strong>New Project</strong> (Dự án mới) ➔ Đặt tên <span class="inline-code">Blogger-Auto-Cloud</span> ➔ Nhấn <strong>Create</strong>.</li>
+          <li>Vào thanh tìm kiếm trên cùng, gõ <strong>Blogger API v3</strong> ➔ Bấm vào kết quả và nhấn nút <strong>Enable (Bật)</strong>.</li>
+          <li>Ở menu bên trái, vào <strong>APIs & Services</strong> ➔ <strong>OAuth consent screen (Màn hình đồng ý OAuth)</strong>:
+            <ul>
+              <li>Chọn <strong>External (Bên ngoài)</strong> ➔ Bấm <strong>Create</strong>.</li>
+              <li>Điền tên ứng dụng (vd: <i>Blogger Cloud Poster</i>) và email của bạn ở các ô bắt buộc.</li>
+              <li>Bấm <strong>Save and Continue</strong> qua các bước cho đến khi hoàn tất.</li>
+              <li>Tại mục <strong>Test users (Người dùng thử nghiệm)</strong>: bấm <strong>+ Add Users</strong> và thêm chính địa chỉ Gmail của bạn vào.</li>
+            </ul>
+          </li>
+          <li>Ở menu bên trái, vào <strong>Credentials (Thông tin xác thực)</strong>:
+            <ul>
+              <li>Bấm <strong>+ Create Credentials</strong> ➔ Chọn <strong>OAuth client ID</strong>.</li>
+              <li>Mục <i>Application type</i>: chọn <strong>Desktop app</strong> (hoặc Web application).</li>
+              <li>Bấm <strong>Create</strong>. Google sẽ cấp cho bạn <strong>Client ID</strong> và <strong>Client Secret</strong>. Hãy copy 2 giá trị này lại.</li>
+            </ul>
+          </li>
+          <li><strong>Lấy Refresh Token:</strong>
+            <ul>
+              <li>Chạy file <span class="inline-code">get_refresh_token.py</span> trên máy tính hoặc sử dụng công cụ <a href="https://developers.google.com/oauthplayground" target="_blank">Google OAuth 2.0 Playground</a>.</li>
+              <li>Phạm vi quyền (Scope) cần tích chọn: <span class="inline-code">https://www.googleapis.com/auth/blogger</span>.</li>
+              <li>Cấp quyền xong, bạn sẽ nhận được chuỗi mã <strong>GOOGLE_REFRESH_TOKEN</strong> (dạng: <span class="inline-code">1//0gvjF...</span>).</li>
+            </ul>
+          </li>
+        </ol>
+
+        <!-- Image Placeholder 2 -->
+        <div class="image-placeholder-box">
+          <span class="placeholder-badge">Ảnh minh họa 02</span>
+          <div class="placeholder-icon">
+            <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+          </div>
+          <div class="placeholder-title">Màn Hình Tạo OAuth Client ID Trên Google Cloud Console</div>
+          <div class="placeholder-desc">(Chụp giao diện tạo Desktop App và cửa sổ popup hiển thị Client ID & Client Secret)</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ==================== BUOC 3 ==================== -->
+    <article class="step-card">
+      <div class="step-header">
+        <div class="step-num">03</div>
+        <div class="step-title-wrap">
+          <h3>Lấy Google Gemini API Key (Bộ Não Viết Bài Miễn Phí)</h3>
+          <p>Trí tuệ nhân tạo Gemini 2.5 Flash thông minh sẽ tự động sinh nội dung chuẩn SEO 1500+ từ.</p>
+        </div>
+      </div>
+
+      <div class="step-content">
+        <ol>
+          <li>Truy cập trang Google AI Studio: <a href="https://aistudio.google.com/app/apikey" target="_blank">https://aistudio.google.com/app/apikey</a>.</li>
+          <li>Đăng nhập tài khoản Google của bạn.</li>
+          <li>Bấm nút <strong>Create API Key</strong> (Tạo khóa API).</li>
+          <li>Chọn đúng dự án Google Cloud bạn vừa tạo ở Bước 2.</li>
+          <li>Bấm <strong>Create API Key in existing project</strong>.</li>
+          <li>Copy chuỗi khóa API bắt đầu bằng <span class="inline-code">AIzaSy...</span> lưu lại. Đây chính là <strong>GEMINI_API_KEY</strong>.</li>
+        </ol>
+
+        <!-- Image Placeholder 3 -->
+        <div class="image-placeholder-box">
+          <span class="placeholder-badge">Ảnh minh họa 03</span>
+          <div class="placeholder-icon">
+            <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+          </div>
+          <div class="placeholder-title">Giao Diện Tạo Khóa Gemini API Key Miễn Phí Tại AI Studio</div>
+          <div class="placeholder-desc">(Chụp nút Create API Key và cửa sổ sao chép chuỗi mã AIzaSy...)</div>
+        </div>
+
+        <div class="alert-box alert-success">
+          <div class="alert-icon">✨</div>
+          <div><strong>Mẹo nâng cao (Key Pool):</strong> Bạn có thể tạo 3 đến 5 khóa Gemini API Key từ các tài khoản Gmail khác nhau và điền cách nhau bằng dấu phẩy (<span class="inline-code">KEY_1,KEY_2,KEY_3</span>) vào biến <strong>GEMINI_API_KEYS</strong> để hệ thống xoay vòng tự động, không bao giờ lo hết hạn ngạch!</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ==================== BUOC 4 ==================== -->
+    <article class="step-card">
+      <div class="step-header">
+        <div class="step-num">04</div>
+        <div class="step-title-wrap">
+          <h3>Tạo Telegram Bot & Nhóm Nhận Báo Cáo Tự Động</h3>
+          <p>Mỗi khi có bài viết được lên lịch hay gửi Indexing thành công, điện thoại của bạn sẽ rung báo ngay lập tức.</p>
+        </div>
+      </div>
+
+      <div class="step-content">
+        <ol>
+          <li>Mở ứng dụng Telegram trên điện thoại hoặc máy tính.</li>
+          <li>Tìm kiếm bot chính thức: <strong>@BotFather</strong>.</li>
+          <li>Gõ lệnh <span class="inline-code">/newbot</span>, đặt tên cho bot (vd: <i>Blogger LuViet Bot</i>) và đặt username kết thúc bằng <span class="inline-code">bot</span> (vd: <i>my_luviet_blogger_bot</i>).</li>
+          <li>BotFather sẽ gửi cho bạn một chuỗi token dạng: <span class="inline-code">8480459173:AAHhSTEG...</span>. Lưu lại làm <strong>TELEGRAM_BOT_TOKEN</strong>.</li>
+          <li>Tạo một nhóm Telegram mới trên điện thoại (đặt tên vd: <i>Báo Cáo Blogger</i>) và mời con Bot vừa tạo vào nhóm.</li>
+          <li>Thêm bot <strong>@RawDataBot</strong> hoặc <strong>@userinfobot</strong> vào nhóm để lấy số <strong>Chat ID</strong> của nhóm (thường là một dãy số âm bắt đầu bằng dấu trừ, ví dụ: <span class="inline-code">-5074952407</span> hoặc <span class="inline-code">-100...</span>). Sau khi lấy xong Chat ID, bạn có thể xóa bot lấy ID ra khỏi nhóm.</li>
+        </ol>
+
+        <!-- Image Placeholder 4 -->
+        <div class="image-placeholder-box">
+          <span class="placeholder-badge">Ảnh minh họa 04</span>
+          <div class="placeholder-icon">
+            <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+          </div>
+          <div class="placeholder-title">Tin Nhắn Cấp Bot Token Của @BotFather & Nhóm Báo Cáo Telegram</div>
+          <div class="placeholder-desc">(Chụp giao diện chat với @BotFather và tin nhắn mẫu thông báo báo cáo đăng bài thành công trong nhóm)</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ==================== BUOC 5 ==================== -->
+    <article class="step-card">
+      <div class="step-header">
+        <div class="step-num">05</div>
+        <div class="step-title-wrap">
+          <h3>Cấu Hình Google Sheets (Kho Đề Tài & Webhook Báo Cáo)</h3>
+          <p>Nơi bạn nhập hàng trăm tiêu đề bài viết và tự động đổi màu xanh khi bài viết đăng thành công.</p>
+        </div>
+      </div>
+
+      <div class="step-content">
+        <ol>
+          <li>Mở bảng tính Google Sheets kế hoạch bài viết của bạn. Đảm bảo cấu trúc cột như sau:
+            <ul>
+              <li><strong>Cột A:</strong> Số Thứ Tự (STT)</li>
+              <li><strong>Cột B:</strong> Tiêu Đề Bài Viết</li>
+              <li><strong>Cột C:</strong> Từ Khóa SEO Chính</li>
+              <li><strong>Cột D:</strong> Ý Định Tìm Kiếm (Search Intent)</li>
+              <li><strong>Cột E:</strong> Nhóm Chuyên Mục (Labels, vd: <i>dich-vu, tin-tuc</i>)</li>
+              <li><strong>Cột F:</strong> Link Ảnh Tùy Chọn (Nếu để trống robot sẽ tự tạo Thumbnail Doanh Nhân)</li>
+              <li><strong>Cột G:</strong> Trạng Thái (Robot sẽ tự điền: <i>Đã lên lịch</i> hoặc <i>Đã đăng</i> và tô màu xanh lá)</li>
+              <li><strong>Cột H:</strong> Ngày Lên Lịch / Xuất Bản</li>
+              <li><strong>Cột I:</strong> Link Bài Viết Thực Tế</li>
+            </ul>
+          </li>
+          <li>Bấm nút <strong>Chia sẻ (Share)</strong> ở góc trên bên phải bảng tính ➔ Mục <i>Quyền truy cập chung</i>: chọn <strong>Bất kỳ ai có đường liên kết</strong> ➔ Chọn quyền <strong>Người xem</strong> (hoặc Người chỉnh sửa) ➔ Sao chép liên kết này lưu làm <strong>GOOGLE_SHEET_URL</strong>.</li>
+          <li><strong>Cài đặt Webhook tự động cập nhật bảng tính:</strong>
+            <ul>
+              <li>Trên thanh menu Google Sheets, bấm <strong>Tiện ích mở rộng (Extensions)</strong> ➔ <strong>Apps Script</strong>.</li>
+              <li>Xóa sạch code mặc định, copy toàn bộ mã nguồn trong file <span class="inline-code">google_sheets_webhook.js</span> dán vào.</li>
+              <li>Nhấn biểu tượng chiếc đĩa mềm để <strong>Lưu (Save)</strong>.</li>
+              <li>Bấm nút <strong>Triển khai (Deploy)</strong> ở góc trên bên phải ➔ <strong>Bản triển khai mới (New deployment)</strong>:
+                <ul>
+                  <li>Chọn loại: <strong>Ứng dụng web (Web app)</strong>.</li>
+                  <li>Mô tả: <i>Blogger Webhook v1</i>.</li>
+                  <li>Thực thi dưới dạng (Execute as): <strong>Tôi (Tài khoản của bạn)</strong>.</li>
+                  <li>Ai có quyền truy cập (Who has access): <strong>Bất kỳ ai (Anyone)</strong>.</li>
+                </ul>
+              </li>
+              <li>Nhấn <strong>Triển khai (Deploy)</strong> ➔ Google sẽ cấp cho bạn một đường dẫn Web App kết thúc bằng <span class="inline-code">/exec</span>.</li>
+              <li>Copy đường link này lưu làm <strong>GOOGLE_SHEET_WEBHOOK_URL</strong>.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <!-- Image Placeholder 5 -->
+        <div class="image-placeholder-box">
+          <span class="placeholder-badge">Ảnh minh họa 05</span>
+          <div class="placeholder-icon">
+            <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+          </div>
+          <div class="placeholder-title">Giao Diện Triển Khai Web App Trên Google Apps Script</div>
+          <div class="placeholder-desc">(Chụp cửa sổ New Deployment với quyền "Anyone" và khung sao chép URL kết thúc bằng /exec)</div>
+        </div>
+
+        <div class="alert-box alert-warning">
+          <div class="alert-icon">⚠️</div>
+          <div><strong>LƯU Ý CỰC KỲ QUAN TRỌNG:</strong> Tuyệt đối <strong>KHÔNG</strong> bấm vào mục "Bộ kích hoạt (Triggers - biểu tượng đồng hồ)" trong Apps Script để thêm trigger "Khi chỉnh sửa (On edit)". Webhook chạy độc lập qua link Web App, thêm trigger edit sẽ làm Google hiểu nhầm và gửi email báo lỗi máy chủ!</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ==================== BUOC 6 ==================== -->
+    <article class="step-card">
+      <div class="step-header">
+        <div class="step-num">06</div>
+        <div class="step-title-wrap">
+          <h3>Cấu Hình Google Indexing API (Lập Chỉ Mục Siêu Tốc)</h3>
+          <p>Tự động bắn URL bài viết đã Live lên thẳng Google Bot để bài viết xuất hiện trên kết quả tìm kiếm Google chỉ sau vài phút.</p>
+        </div>
+      </div>
+
+      <div class="step-content">
+        <ol>
+          <li>Quay lại <strong>Google Cloud Console</strong>: <a href="https://console.cloud.google.com" target="_blank">https://console.cloud.google.com</a>.</li>
+          <li>Tìm kiếm <strong>Web Search Indexing API</strong> ➔ Bấm vào và nhấn nút <strong>Enable (Bật)</strong>.</li>
+          <li>Vào <strong>IAM & Admin</strong> ➔ <strong>Service Accounts (Tài khoản dịch vụ)</strong> ➔ Bấm <strong>+ Create Service Account</strong>.
+            <ul>
+              <li>Đặt tên tài khoản: <span class="inline-code">blogger-indexing-bot</span> ➔ Nhấn <strong>Create and Continue</strong> ➔ Nhấn <strong>Done</strong>.</li>
+              <li>Bạn sẽ thấy một địa chỉ email robot dạng: <span class="inline-code">blogger-indexing-bot@du-an.iam.gserviceaccount.com</span>. Hãy copy email này lại.</li>
+            </ul>
+          </li>
+          <li>Bấm vào email Service Account vừa tạo ➔ Chuyển qua tab <strong>Keys (Khóa)</strong> ➔ Bấm <strong>Add Key (Thêm khóa)</strong> ➔ <strong>Create new key</strong> ➔ Chọn định dạng <strong>JSON</strong> ➔ Nhấn <strong>Create</strong>.
+            <ul>
+              <li>Một file đuôi <span class="inline-code">.json</span> sẽ được tải xuống máy tính của bạn.</li>
+              <li>Mở file này bằng Notepad, chọn <strong>Ctrl + A</strong> và <strong>Ctrl + C</strong> để copy toàn bộ nội dung file JSON này.</li>
+            </ul>
+          </li>
+          <li><strong>Phân quyền trong Google Search Console:</strong>
+            <ul>
+              <li>Truy cập <a href="https://search.google.com/search-console" target="_blank">Google Search Console</a> của website Blogger của bạn.</li>
+              <li>Vào menu <strong>Cài đặt (Settings)</strong> ➔ <strong>Người dùng và quyền (Users and permissions)</strong>.</li>
+              <li>Bấm nút <strong>Thêm người dùng (Add user)</strong> ➔ Dán địa chỉ email robot của Service Account ở trên vào ➔ Phân quyền: <strong>Chủ sở hữu (Owner)</strong> ➔ Nhấn <strong>Thêm (Add)</strong>.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <!-- Image Placeholder 6 -->
+        <div class="image-placeholder-box">
+          <span class="placeholder-badge">Ảnh minh họa 06</span>
+          <div class="placeholder-icon">
+            <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+          </div>
+          <div class="placeholder-title">Thêm Email Service Account Làm Chủ Sở Hữu (Owner) Trong Google Search Console</div>
+          <div class="placeholder-desc">(Chụp màn hình Settings > Users and permissions > Thêm email robot với quyền Owner)</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ==================== BUOC 7 ==================== -->
+    <article class="step-card">
+      <div class="step-header">
+        <div class="step-num">07</div>
+        <div class="step-title-wrap">
+          <h3>Đưa Toàn Bộ Thư Mục Lên GitHub (3 Phương Pháp Cực Dễ & Chi Tiết)</h3>
+          <p>Tải toàn bộ mã nguồn từ máy tính D:\blogger-auto-cloud lên kho lưu trữ riêng tư của bạn trên GitHub.</p>
+        </div>
+      </div>
+
+      <div class="step-content">
+        <h4 style="font-size: 17px; font-weight: 800; color: var(--primary); margin: 15px 0 10px;">Giai đoạn 1: Tạo Repository Mới Trên GitHub</h4>
+        <ol>
+          <li>Truy cập <a href="https://github.com" target="_blank">https://github.com</a> và đăng nhập tài khoản GitHub của bạn.</li>
+          <li>Nhấn vào biểu tượng dấu <strong>+</strong> ở góc trên bên phải màn hình ➔ Chọn <strong>New repository</strong> (hoặc truy cập thẳng <a href="https://github.com/new" target="_blank">https://github.com/new</a>).</li>
+          <li>Tại trang tạo kho:
+            <ul>
+              <li><strong>Repository name:</strong> Đặt tên là <span class="inline-code">blogger-auto-cloud</span>.</li>
+              <li><strong>Description:</strong> <i>Hệ thống tự động hóa Blogger AI Cloud 24/7</i> (tùy chọn).</li>
+              <li><strong>Quyền riêng tư:</strong> Chọn <strong>Private</strong> (Riêng tư - Bắt buộc để người khác không nhìn thấy mã nguồn và dữ liệu của bạn).</li>
+              <li><strong style="color: var(--danger);">⚠️ LƯU Ý SỐNG CÒN:</strong> Tại mục <i>"Initialize this repository with"</i>: Tuyệt đối <strong>KHÔNG tích chọn</strong> bất kỳ ô nào (KHÔNG Add README file, KHÔNG Add .gitignore, KHÔNG Choose a license) vì mã nguồn trên máy bạn đã có sẵn toàn bộ các file này rồi!</li>
+            </ul>
+          </li>
+          <li>Bấm nút xanh <strong>Create repository</strong>. GitHub sẽ đưa bạn đến trang chứa link kho dạng: <span class="inline-code">https://github.com/&lt;TÊN_GITHUB&gt;/blogger-auto-cloud.git</span>.</li>
+        </ol>
+
+        <h4 style="font-size: 17px; font-weight: 800; color: var(--primary); margin: 25px 0 10px;">Giai đoạn 2: Chọn 1 Trong 3 Cách Đẩy Code Lên GitHub</h4>
+
+        <!-- TAB/OPTION 1 -->
+        <div style="background: #f8fafc; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; margin-bottom: 20px;">
+          <h5 style="font-size: 16px; font-weight: 700; color: #1e293b; margin-bottom: 8px;">🌟 CÁCH 1: Dùng Visual Studio Code (Khuyên dùng nhất - Không cần gõ lệnh)</h5>
+          <p style="font-size: 14.5px; margin-bottom: 10px;">Máy tính của bạn đã cài sẵn VS Code, bạn có thể đẩy code lên chỉ bằng vài cú nhấp chuột:</p>
+          <ol style="margin-left: 20px; font-size: 14.5px;">
+            <li>Mở <strong>Visual Studio Code</strong>. Vào menu <strong>File</strong> ➔ <strong>Open Folder...</strong> ➔ Tìm và chọn đúng thư mục <span class="inline-code">D:\blogger-auto-cloud</span>.</li>
+            <li>Ở thanh công cụ bên trái của VS Code, bấm vào biểu tượng nhánh cây <strong>Source Control</strong> (hoặc nhấn phím tắt <span class="inline-code">Ctrl + Shift + G</span>).</li>
+            <li>Bấm nút <strong>"Publish to GitHub"</strong> (hoặc nếu đã có commit thì bấm biểu tượng 3 chấm <span class="inline-code">...</span> ➔ <strong>Branch</strong> ➔ <strong>Publish Branch</strong>).</li>
+            <li>Một ô tìm kiếm xuất hiện trên cùng màn hình, chọn: <strong>"Publish to GitHub private repository"</strong>.</li>
+            <li>Nếu đây là lần đầu tiên bạn dùng VS Code với GitHub, trình duyệt sẽ tự động bật lên ➔ Bạn bấm <strong>"Authorize Visual Studio Code"</strong> để đồng ý liên kết.</li>
+            <li>Chờ khoảng 5-10 giây, toàn bộ code sẽ được tải lên kho GitHub của bạn an toàn 100%!</li>
+          </ol>
+        </div>
+
+        <!-- TAB/OPTION 2 -->
+        <div style="background: #f8fafc; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; margin-bottom: 20px;">
+          <h5 style="font-size: 16px; font-weight: 700; color: #1e293b; margin-bottom: 8px;">💻 CÁCH 2: Dùng Dòng Lệnh Git (Git Bash / PowerShell)</h5>
+          <p style="font-size: 14.5px; margin-bottom: 10px;">Chuẩn xác, linh hoạt cho người muốn nắm rõ từng bước hoạt động:</p>
+          <ol style="margin-left: 20px; font-size: 14.5px;">
+            <li><strong>Cài đặt Git (nếu máy chưa có):</strong> Mở PowerShell bằng quyền Admin và chạy lệnh:
+              <div class="code-wrapper" style="margin: 8px 0;">
+                <div class="code-topbar"><span>PowerShell</span><button class="copy-btn" onclick="copyCode(this, 'code-install-git')">Copy</button></div>
+                <pre><code id="code-install-git">winget install --id Git.Git -e --source winget</code></pre>
+              </div>
+              <i>(Hoặc tải file cài đặt trực tiếp từ trang chủ: <a href="https://git-scm.com/download/win" target="_blank">https://git-scm.com/download/win</a>)</i>.
+            </li>
+            <li><strong>Mở Terminal tại thư mục:</strong> Giữ phím <span class="inline-code">Shift</span> + click chuột phải vào vùng trống trong thư mục <span class="inline-code">D:\blogger-auto-cloud</span> ➔ Chọn <strong>Open in Terminal</strong> (hoặc Open PowerShell window here).</li>
+            <li><strong>Chạy lần lượt các câu lệnh sau:</strong>
+              <div class="code-wrapper" style="margin: 8px 0;">
+                <div class="code-topbar"><span>Terminal / PowerShell</span><button class="copy-btn" onclick="copyCode(this, 'code-git-push')">Copy</button></div>
+                <pre><code id="code-git-push"># 1. Khởi tạo Git trong thư mục
+git init
+
+# 2. Gom tất cả các file cần đẩy (file bảo mật đã được .gitignore tự động loại trừ)
+git add .
+
+# 3. Tạo commit đầu tiên
+git commit -m "Khoi tao he thong Blogger Auto Cloud"
+
+# 4. Đặt tên nhánh chính là main
+git branch -M main
+
+# 5. Gắn địa chỉ kho GitHub của bạn (thay thuantranblog bằng username của bạn)
+git remote add origin https://github.com/thuantranblog/blogger-auto-cloud.git
+
+# 6. Đẩy mã nguồn lên nhánh main
+git push -u origin main</code></pre>
+              </div>
+              <small><i>* Mẹo: Nếu máy báo "remote origin already exists", hãy chạy: <span class="inline-code">git remote set-url origin https://github.com/thuantranblog/blogger-auto-cloud.git</span> rồi chạy lại lệnh push.</i></small>
+            </li>
+            <li style="margin-top: 10px;"><strong>Cách xử lý khi GitHub hỏi Mật khẩu (Password / Personal Access Token):</strong>
+              <div class="alert-box alert-warning" style="margin: 10px 0; padding: 12px 16px;">
+                <div class="alert-icon">⚠️</div>
+                <div style="font-size: 13.5px;"><strong>CHÚ Ý QUAN TRỌNG:</strong> Từ năm 2021, GitHub không chấp nhận mật khẩu tài khoản Gmail khi chạy lệnh git push. Nếu cửa sổ yêu cầu Password hiện ra, bạn phải nhập <strong>Personal Access Token (PAT)</strong>:
+                  <ol style="margin: 6px 0 0 16px;">
+                    <li>Vào GitHub ➔ Bấm vào Avatar góc trên cùng bên phải ➔ <strong>Settings</strong>.</li>
+                    <li>Cuộn thanh cuộn bên trái xuống dưới cùng ➔ Bấm <strong>Developer settings</strong> ➔ Chọn <strong>Personal access tokens</strong> ➔ <strong>Tokens (classic)</strong>.</li>
+                    <li>Bấm nút <strong>Generate new token</strong> ➔ <strong>Generate new token (classic)</strong>.</li>
+                    <li>Ô <i>Note</i> gõ: <span class="inline-code">BloggerBot</span>. Ô <i>Expiration</i> chọn: <span class="inline-code">No expiration</span> (hoặc 90 days).</li>
+                    <li>Tích chọn 2 quyền bắt buộc: <span class="inline-code">repo</span> (Full control of private repositories) và <span class="inline-code">workflow</span> (Update GitHub Action workflows).</li>
+                    <li>Bấm <strong>Generate token</strong> ở cuối trang ➔ Sao chép mã token dạng <span class="inline-code">ghp_xxxxxx...</span>.</li>
+                    <li>Quay lại màn hình Terminal, khi hỏi Password thì dán mã token này vào rồi nhấn Enter!</li>
+                  </ol>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- TAB/OPTION 3 -->
+        <div style="background: #f8fafc; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; margin-bottom: 20px;">
+          <h5 style="font-size: 16px; font-weight: 700; color: #1e293b; margin-bottom: 8px;">🖥️ CÁCH 3: Dùng Ứng Dụng Đồ Họa GitHub Desktop</h5>
+          <ol style="margin-left: 20px; font-size: 14.5px;">
+            <li>Tải và cài đặt phần mềm chính thức: <a href="https://desktop.github.com" target="_blank">https://desktop.github.com</a>.</li>
+            <li>Đăng nhập tài khoản GitHub bằng trình duyệt (tự động kết nối 1 chạm).</li>
+            <li>Bấm menu <strong>File</strong> ➔ <strong>Add Local Repository...</strong> ➔ Bấm <strong>Choose...</strong> và chọn thư mục <span class="inline-code">D:\blogger-auto-cloud</span>.</li>
+            <li>Bấm nút <strong>Publish repository</strong> ➔ Đảm bảo đã tích chọn <span class="inline-code">Keep this code private</span> ➔ Bấm nút xanh <strong>Publish repository</strong> là xong!</li>
+          </ol>
+        </div>
+
+        <!-- Image Placeholder 7 -->
+        <div class="image-placeholder-box">
+          <span class="placeholder-badge">Ảnh minh họa 07</span>
+          <div class="placeholder-icon">
+            <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+          </div>
+          <div class="placeholder-title">Mã Nguồn Sau Khi Đẩy Thành Công Lên Kho GitHub Riêng Tư</div>
+          <div class="placeholder-desc">(Chụp giao diện trang chủ Repository trên web GitHub hiển thị đầy đủ thư mục .github/workflows, main.py, requirements.txt, v.v.)</div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ==================== BUOC 8 ==================== -->
+    <article class="step-card">
+      <div class="step-header">
+        <div class="step-num">08</div>
+        <div class="step-title-wrap">
+          <h3>Cấp Quyền Ghi & Nhập 10 Khóa Bí Mật Vào GitHub Secrets</h3>
+          <p>Cấp quyền cho robot lưu lịch sử và bảo mật an toàn tuyệt đối các API Key.</p>
+        </div>
+      </div>
+
+      <div class="step-content">
+        <h4 style="font-size: 17px; font-weight: 800; color: var(--danger); margin: 10px 0 12px;">⚠️ Giai đoạn 1: Cấp Quyền Ghi Lịch Sử Cho Robot (Bắt Buộc - Không Được Bỏ Qua!)</h4>
+        <p>Hệ thống tự động đăng bài cần lưu lại file <span class="inline-code">posted_history.json</span> và ảnh thumbnail đã tạo vào kho để tránh đăng trùng lặp. Nếu không bật quyền này, hệ thống sẽ báo lỗi <span class="inline-code">Error 403: Resource not accessible</span>:</p>
+        <ol>
+          <li>Tại trang Repository <span class="inline-code">blogger-auto-cloud</span> trên GitHub của bạn, bấm vào tab <strong>Settings</strong> ở thanh menu trên cùng.</li>
+          <li>Ở cột menu bên trái, tìm mục <strong>Actions</strong> ➔ chọn <strong>General</strong>.</li>
+          <li>Cuộn trang xuống mục <strong>Workflow permissions</strong>:
+            <ul>
+              <li>Tích chọn: <strong>Read and write permissions</strong> (Cho phép đọc và ghi mã nguồn).</li>
+              <li>Tích chọn ô vuông: <strong>Allow GitHub Actions to create and approve pull requests</strong>.</li>
+            </ul>
+          </li>
+          <li>Nhấn nút <strong>Save</strong> để lưu lại.</li>
+        </ol>
+
+        <h4 style="font-size: 17px; font-weight: 800; color: var(--primary); margin: 25px 0 12px;">Giai đoạn 2: Nhập Danh Sách Khóa Bí Mật (Repository Secrets)</h4>
+        <ol>
+          <li>Vẫn ở trong trang <strong>Settings</strong> của Repository, tại cột bên trái tìm mục <strong>Secrets and variables</strong> ➔ chọn <strong>Actions</strong>.</li>
+          <li>Bấm nút màu xanh <strong>New repository secret</strong> để lần lượt thêm các biến sau:</li>
+        </ol>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 32%;">Tên Secret (Gõ chính xác từng chữ)</th>
+                <th>Giá trị cần điền vào</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="inline-code">BLOGGER_BLOG_ID</span></td>
+                <td>Dãy số ID blog lấy ở Bước 1 (Ví dụ: 1444221897689962852).</td>
+              </tr>
+              <tr>
+                <td><span class="inline-code">GEMINI_API_KEY</span></td>
+                <td>Khóa Gemini API lấy ở Bước 3 (Bắt đầu bằng chuỗi AIzaSy...).</td>
+              </tr>
+              <tr>
+                <td><span class="inline-code">GEMINI_API_KEYS</span></td>
+                <td><i>(Tùy chọn)</i> Nếu có nhiều key, nhập cách nhau bằng dấu phẩy để tự động xoay vòng: <span class="inline-code">AIzaSy1...,AIzaSy2...</span>.</td>
+              </tr>
+              <tr>
+                <td><span class="inline-code">GOOGLE_CLIENT_ID</span></td>
+                <td>OAuth Client ID lấy ở Bước 2 (Dạng: ...apps.googleusercontent.com).</td>
+              </tr>
+              <tr>
+                <td><span class="inline-code">GOOGLE_CLIENT_SECRET</span></td>
+                <td>OAuth Client Secret lấy ở Bước 2 (Dạng: GOCSPX-...).</td>
+              </tr>
+              <tr>
+                <td><span class="inline-code">GOOGLE_REFRESH_TOKEN</span></td>
+                <td>Refresh Token Blogger lấy ở Bước 2 (Dạng: 1//0...).</td>
+              </tr>
+              <tr>
+                <td><span class="inline-code">GOOGLE_SHEET_URL</span></td>
+                <td>Đường link chia sẻ file Google Sheets ở Bước 5.</td>
+              </tr>
+              <tr>
+                <td><span class="inline-code">GOOGLE_SHEET_WEBHOOK_URL</span></td>
+                <td>Đường link Web App Apps Script đuôi <span class="inline-code">/exec</span> ở Bước 5.</td>
+              </tr>
+              <tr>
+                <td><span class="inline-code">TELEGRAM_BOT_TOKEN</span></td>
+                <td>Chuỗi Token bot từ @BotFather ở Bước 4 (Dạng: 8480459173:AAHh...).</td>
+              </tr>
+              <tr>
+                <td><span class="inline-code">TELEGRAM_CHAT_ID</span></td>
+                <td>Dãy số Chat ID nhóm nhận báo cáo ở Bước 4 (Ví dụ: -5074952407).</td>
+              </tr>
+              <tr>
+                <td><span class="inline-code">INDEXING_SERVICE_ACCOUNT_JSON</span></td>
+                <td><i>(Tùy chọn)</i> Toàn bộ nội dung file JSON của Service Account tải về ở Bước 6 (Bắt đầu từ dấu { đến dấu }).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Image Placeholder 8 -->
+        <div class="image-placeholder-box">
+          <span class="placeholder-badge">Ảnh minh họa 08</span>
+          <div class="placeholder-icon">
+            <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+          </div>
+          <div class="placeholder-title">Màn Hình Thiết Lập Workflow Permissions & Danh Sách Secrets Đầy Đủ</div>
+          <div class="placeholder-desc">(Chụp vị trí tích chọn Read and write permissions và danh sách các Secrets đã được nhập thành công)</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ==================== BUOC 9 ==================== -->
+    <article class="step-card">
+      <div class="step-header">
+        <div class="step-num">09</div>
+        <div class="step-title-wrap">
+          <h3>Bấm Chạy Thử Nghiệm & Tận Hưởng Thành Quả Tự Động 24/7</h3>
+          <p>Kích hoạt lần đầu tiên bằng tay và ngắm nhìn robot làm việc hoàn toàn tự động.</p>
+        </div>
+      </div>
+
+      <div class="step-content">
+        <ol>
+          <li>Trên repository GitHub của bạn, bấm vào tab <strong>Actions</strong> trên cùng.</li>
+          <li>Ở cột bên trái, bấm chọn quy trình: <strong>🚀 Blogger Gemini AI Auto-Poster Cloud</strong>.</li>
+          <li>Bạn sẽ thấy một thanh thông báo màu xanh/xám có nút <strong>Run workflow</strong> ở bên phải:
+            <ul>
+              <li>Bấm nút <strong>Run workflow</strong>.</li>
+              <li>Chọn số lượng bài (vd: 1 bài), chế độ (schedule hoặc publish) và bấm nút xanh <strong>Run workflow</strong>.</li>
+            </ul>
+          </li>
+          <li>Chờ khoảng 1-2 phút:
+            <ul>
+              <li>Một vòng tròn màu vàng xoay tròn và đổi sang <strong>màu xanh lá cây (Success ✓)</strong>.</li>
+              <li>Điện thoại của bạn sẽ báo ting ting trên Telegram thông báo bài viết đã được lên lịch thành công!</li>
+              <li>Mở Google Sheets ra kiểm tra: dòng đề tài vừa chọn đã được tô màu xanh lá, có ngày giờ lên lịch và link bài viết!</li>
+              <li>Mở trang quản trị Blogger mục <i>Đã lên lịch (Scheduled)</i>: bài viết đã sẵn sàng với hình Thumbnail Doanh Nhân YouTube sắc nét!</li>
+              <li>Vào đúng giờ xuất bản, robot quét bài thấy HTTP 200 Live sẽ tự động bắn Indexing lên Google Search Console ngay lập tức!</li>
+            </ul>
+          </li>
+        </ol>
+
+        <!-- Image Placeholder 9 -->
+        <div class="image-placeholder-box">
+          <span class="placeholder-badge">Ảnh minh họa 09</span>
+          <div class="placeholder-icon">
+            <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+          </div>
+          <div class="placeholder-title">Kết Quả Vận Hành: Nút Run Workflow Thành Công & Thông Báo Telegram</div>
+          <div class="placeholder-desc">(Chụp tab Actions báo Success màu xanh cùng ảnh chụp màn hình tin nhắn Telegram báo cáo xuất bản & Google Indexing)</div>
+        </div>
+
+        <div class="alert-box alert-success">
+          <div class="alert-icon">🎉</div>
+          <div><strong>XIN CHÚC MỪNG BẠN!</strong> Bạn đã hoàn thành việc cài đặt cỗ máy tự động hóa nội dung số 1 cho Blogger. Từ nay, cứ mỗi <strong>20 phút</strong>, GitHub Actions sẽ tự động làm toàn bộ mọi việc từ A-Z mà bạn không cần phải đụng tay hay tốn một đồng chi phí nào!</div>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Hệ thống tự động hóa nội dung & Website bán hàng <strong>AILADI LuViet</strong> (my.luviet.com)</p>
+    <p style="margin-top: 6px; font-size: 13px;">Bản quyền mã nguồn thuộc về tác giả • Tài liệu hướng dẫn chuẩn hóa 2026</p>
+  </footer>
+
+  <script>
+    // Copy code button script
+    function copyCode(btn, elementId) {
+      var code = document.getElementById(elementId).innerText;
+      navigator.clipboard.writeText(code).then(function() {
+        var originalText = btn.innerHTML;
+        btn.innerHTML = "Đã sao chép! ✓";
+        btn.style.background = "#059669";
+        btn.style.borderColor = "#059669";
+        setTimeout(function() {
+          btn.innerHTML = originalText;
+          btn.style.background = "";
+          btn.style.borderColor = "";
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
