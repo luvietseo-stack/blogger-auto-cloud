@@ -341,6 +341,7 @@ def get_blogger_service():
         client_id=GOOGLE_CLIENT_ID,
         client_secret=GOOGLE_CLIENT_SECRET
     )
+    return build('blogger', 'v3', credentials=creds)
 
 def optimize_html_images_seo(content_html, default_alt="", default_keyword=""):
     """
@@ -827,6 +828,7 @@ def main():
             if create_post_thumbnail:
                 try:
                     custom_img = item.get('image_url', '')
+                    art_title = article.get('title') or topic
                     repo_name = os.environ.get('GITHUB_REPOSITORY', '')
                     thumb_url = create_post_thumbnail(
                         title=art_title,
