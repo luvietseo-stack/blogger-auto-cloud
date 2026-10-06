@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-06T13:37:12.361863+00:00",
-  "total_posted": 8,
+  "last_updated": "2026-10-06T19:04:35.619362+00:00",
+  "total_posted": 9,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -18,7 +18,9 @@
       "url": "https://www.bnitopaz.com/2026/10/bni-topaz-chapter-online-mo-hinh-ket.html",
       "published": "2026-10-05T21:30:00-07:00",
       "posted_at": "2026-10-05T15:59:30.279505+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-06T19:04:39.774161+00:00"
     },
     {
       "topic": "Tại Sao Chủ Doanh Nghiệp Thời Đại Mới Chọn Họp BNI Topaz Online Thay Vì Offline?",
@@ -27,7 +29,9 @@
       "url": "https://www.bnitopaz.com/2026/10/tai-sao-chu-doanh-nghiep-thoi-ai-moi.html",
       "published": "2026-10-06T00:30:00-07:00",
       "posted_at": "2026-10-05T16:02:40.512321+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-06T19:04:39.774161+00:00"
     },
     {
       "topic": "Triết Lý Givers Gain (Cho Là Nhận) Được Vận Hành Như Thế Nào Tại BNI Topaz Chapter?",
@@ -72,6 +76,15 @@
       "url": "https://www.bnitopaz.com/2026/10/bai-thuyet-trinh-30-giay-tai-bni-topaz.html",
       "published": "2026-10-07T21:30:00-07:00",
       "posted_at": "2026-10-06T13:37:12.361844+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Khách Mời Được Gì Khi Tham Gia Buổi Họp BNI Topaz Chapter Online Sáng Thứ Năm?",
+      "title": "Khách Mời Được Gì Khi Tham Gia Buổi Họp BNI Topaz Online Sáng Thứ Năm?",
+      "post_id": "677183379833471486",
+      "url": "https://www.bnitopaz.com/2026/10/khach-moi-uoc-gi-khi-tham-gia-buoi-hop.html",
+      "published": "2026-10-08T00:30:00-07:00",
+      "posted_at": "2026-10-06T19:04:35.619344+00:00",
       "mode": "schedule"
     }
   ]
