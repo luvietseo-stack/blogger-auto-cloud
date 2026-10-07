@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-07T02:32:05.247217+00:00",
-  "total_posted": 11,
+  "last_updated": "2026-10-07T09:17:43.321977+00:00",
+  "total_posted": 12,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -40,7 +40,9 @@
       "url": "https://www.bnitopaz.com/2026/10/triet-ly-givers-gain-cho-la-nhan-van.html",
       "published": "2026-10-06T16:30:00-07:00",
       "posted_at": "2026-10-05T16:05:08.164717+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-07T09:17:48.137594+00:00"
     },
     {
       "topic": "Bí Quyết Nhận Hàng Trăm Cơ Hội Kinh Doanh (Referral) Chất Lượng Tại BNI Topaz Online",
@@ -49,7 +51,9 @@
       "url": "https://www.bnitopaz.com/2026/10/bi-quyet-nhan-hang-tram-co-hoi-kinh.html",
       "published": "2026-10-06T21:30:00-07:00",
       "posted_at": "2026-10-05T18:04:13.642898+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-07T09:17:48.137594+00:00"
     },
     {
       "topic": "Quy Tắc Độc Quyền Ngành Nghề Tại BNI Topaz: Lợi Thế Cạnh Tranh Tuyệt Đối Cho Bạn",
@@ -58,7 +62,9 @@
       "url": "https://www.bnitopaz.com/2026/10/quy-tac-oc-quyen-nganh-nghe-tai-bni.html",
       "published": "2026-10-07T00:30:00-07:00",
       "posted_at": "2026-10-06T00:10:41.395891+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-07T09:17:48.137594+00:00"
     },
     {
       "topic": "Quy Trình 1-2-1 Đỉnh Cao Tại BNI Topaz: Biến Mối Quan Hệ Thành Đơn Hàng Lớn",
@@ -103,6 +109,15 @@
       "url": "https://www.bnitopaz.com/2026/10/chuyen-oi-so-trong-giao-thuong-b2b-thuc.html",
       "published": "2026-10-08T21:30:00-07:00",
       "posted_at": "2026-10-07T02:32:05.247199+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "7 Giá Trị Cốt Lõi Của BNI Giúp Doanh Nhân Topaz Chapter Đứng Vững Trong Khủng Hoảng",
+      "title": "7 Giá Trị Cốt Lõi Của BNI Giúp Doanh Nhân Topaz Chapter Đứng Vững",
+      "post_id": "5838977599700152057",
+      "url": "https://www.bnitopaz.com/2026/10/7-gia-tri-cot-loi-cua-bni-giup-doanh.html",
+      "published": "2026-10-09T00:30:00-07:00",
+      "posted_at": "2026-10-07T09:17:43.321960+00:00",
       "mode": "schedule"
     }
   ]
