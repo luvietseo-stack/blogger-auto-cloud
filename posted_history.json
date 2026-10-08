@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-08T01:19:19.580399+00:00",
-  "total_posted": 15,
+  "last_updated": "2026-10-08T07:35:38.202104+00:00",
+  "total_posted": 16,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -73,7 +73,9 @@
       "url": "https://www.bnitopaz.com/2026/10/quy-trinh-1-2-1-inh-cao-tai-bni-topaz.html",
       "published": "2026-10-07T16:30:00-07:00",
       "posted_at": "2026-10-06T06:35:09.447012+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-08T07:35:42.261635+00:00"
     },
     {
       "topic": "Bài Thuyết Trình 30 Giây Tại BNI Topaz: Công Thức Giới Thiệu Bản Thân Chốt Hợp Đồng",
@@ -145,6 +147,15 @@
       "url": "https://www.bnitopaz.com/2026/10/o-luong-hieu-qua-tham-gia-bni-topaz-kpi.html",
       "published": "2026-10-10T00:30:00-07:00",
       "posted_at": "2026-10-08T01:19:19.580379+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Nghệ Thuật Trao Referral Đỉnh Cao Tại BNI Topaz: Làm Sao Để Cơ Hội Chắc Chắn Thành Tiền?",
+      "title": "Nghệ Thuật Trao Referral Đỉnh Cao Tại BNI Topaz: Cơ Hội Chắc Chắn Thành Tiền?",
+      "post_id": "5233727226306466944",
+      "url": "https://www.bnitopaz.com/2026/10/nghe-thuat-trao-referral-inh-cao-tai.html",
+      "published": "2026-10-10T16:30:00-07:00",
+      "posted_at": "2026-10-08T07:35:38.202087+00:00",
       "mode": "schedule"
     }
   ]
