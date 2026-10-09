@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-09T00:39:49.838109+00:00",
-  "total_posted": 19,
+  "last_updated": "2026-10-09T06:45:15.021608+00:00",
+  "total_posted": 20,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -84,7 +84,9 @@
       "url": "https://www.bnitopaz.com/2026/10/bai-thuyet-trinh-30-giay-tai-bni-topaz.html",
       "published": "2026-10-07T21:30:00-07:00",
       "posted_at": "2026-10-06T13:37:12.361844+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-09T06:45:19.735041+00:00"
     },
     {
       "topic": "Khách Mời Được Gì Khi Tham Gia Buổi Họp BNI Topaz Chapter Online Sáng Thứ Năm?",
@@ -104,7 +106,9 @@
       "url": "https://www.bnitopaz.com/2026/10/cach-mo-rong-thi-truong-toan-quoc-ma.html",
       "published": "2026-10-08T16:30:00-07:00",
       "posted_at": "2026-10-06T23:11:06.634171+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-09T06:45:19.735041+00:00"
     },
     {
       "topic": "Chuyển Đổi Số Trong Giao Thương B2B: Bài Học Thực Chiến Từ BNI Topaz Chapter",
@@ -185,6 +189,15 @@
       "url": "https://www.bnitopaz.com/2026/10/bai-showcase-8-phut-trieu-o-tai-bni.html",
       "published": "2026-10-11T16:30:00-07:00",
       "posted_at": "2026-10-09T00:39:49.838077+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Xây Dựng Thương Hiệu Cá Nhân Chuẩn Doanh Nhân Uy Tín Cùng BNI Topaz Online",
+      "title": "Xây Dựng Thương Hiệu Cá Nhân Chuẩn Doanh Nhân Uy Tín Cùng BNI Topaz Online",
+      "post_id": "8826671419508314947",
+      "url": "https://www.bnitopaz.com/2026/10/xay-dung-thuong-hieu-ca-nhan-chuan.html",
+      "published": "2026-10-11T21:30:00-07:00",
+      "posted_at": "2026-10-09T06:45:15.021586+00:00",
       "mode": "schedule"
     }
   ]
