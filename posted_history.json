@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-09T19:36:18.217148+00:00",
-  "total_posted": 22,
+  "last_updated": "2026-10-09T23:30:19.350510+00:00",
+  "total_posted": 23,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -128,7 +128,9 @@
       "url": "https://www.bnitopaz.com/2026/10/7-gia-tri-cot-loi-cua-bni-giup-doanh.html",
       "published": "2026-10-09T00:30:00-07:00",
       "posted_at": "2026-10-07T09:17:43.321960+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-09T23:30:22.809154+00:00"
     },
     {
       "topic": "Xây Dựng Đội Ngũ Bán Hàng 50 Người Miễn Phí Cùng BNI Topaz Chapter Online",
@@ -137,7 +139,9 @@
       "url": "https://www.bnitopaz.com/2026/10/xay-dung-oi-ngu-ban-hang-50-nguoi-mien.html",
       "published": "2026-10-09T16:30:00-07:00",
       "posted_at": "2026-10-07T16:39:24.778625+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-09T23:30:22.809154+00:00"
     },
     {
       "topic": "Tại Sao BNI Topaz Chapter Online Thu Hút Ngày Càng Nhiều Doanh Nhân Trẻ Thế Hệ Mới?",
@@ -218,6 +222,15 @@
       "url": "https://www.bnitopaz.com/2026/10/van-hoa-cam-on-bang-doanh-thu-tai-bni.html",
       "published": "2026-10-12T16:30:00-07:00",
       "posted_at": "2026-10-09T19:36:18.217127+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Kỹ Năng Đặt Câu Hỏi Để Khơi Gợi Nhu Cầu Kinh Doanh Cho Đồng Đội BNI Topaz",
+      "title": "Kỹ Năng Đặt Câu Hỏi Khơi Gợi Nhu Cầu Cho Đồng Đội BNI Topaz",
+      "post_id": "5897857043625392547",
+      "url": "https://www.bnitopaz.com/2026/10/ky-nang-at-cau-hoi-khoi-goi-nhu-cau-cho.html",
+      "published": "2026-10-12T21:30:00-07:00",
+      "posted_at": "2026-10-09T23:30:19.350500+00:00",
       "mode": "schedule"
     }
   ]
