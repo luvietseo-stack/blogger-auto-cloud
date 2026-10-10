@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-10T19:33:16.549497+00:00",
-  "total_posted": 27,
+  "last_updated": "2026-10-10T22:56:22.098610+00:00",
+  "total_posted": 28,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -161,7 +161,9 @@
       "url": "https://www.bnitopaz.com/2026/10/o-luong-hieu-qua-tham-gia-bni-topaz-kpi.html",
       "published": "2026-10-10T00:30:00-07:00",
       "posted_at": "2026-10-08T01:19:19.580379+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-10T22:56:25.854947+00:00"
     },
     {
       "topic": "Nghệ Thuật Trao Referral Đỉnh Cao Tại BNI Topaz: Làm Sao Để Cơ Hội Chắc Chắn Thành Tiền?",
@@ -269,6 +271,15 @@
       "url": "https://www.bnitopaz.com/2026/10/chi-phi-tham-gia-bni-topaz-au-tu-hay.html",
       "published": "2026-10-14T00:30:00-07:00",
       "posted_at": "2026-10-10T19:33:16.549479+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Vai Trò Của Ban Điều Hành (LT) Trong Sự Thành Công Bứt Phá Của BNI Topaz Chapter",
+      "title": "Vai Trò Ban Điều Hành (LT) BNI Topaz Chapter Bứt Phá",
+      "post_id": "5425697178022213117",
+      "url": "https://www.bnitopaz.com/2026/10/vai-tro-ban-ieu-hanh-lt-bni-topaz.html",
+      "published": "2026-10-14T16:30:00-07:00",
+      "posted_at": "2026-10-10T22:56:22.098588+00:00",
       "mode": "schedule"
     }
   ]
