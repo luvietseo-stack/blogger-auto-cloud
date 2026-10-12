@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-11T23:16:16.774538+00:00",
-  "total_posted": 33,
+  "last_updated": "2026-10-12T02:31:05.059659+00:00",
+  "total_posted": 34,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -192,7 +192,9 @@
       "url": "https://www.bnitopaz.com/2026/10/power-team-trong-bni-topaz-on-bay-nhan.html",
       "published": "2026-10-11T00:30:00-07:00",
       "posted_at": "2026-10-08T20:36:02.021078+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-12T02:31:09.899860+00:00"
     },
     {
       "topic": "Kinh Nghiệm Chuẩn Bị Bài Showcase 8 Phút Thuyết Phục Triệu Đô Tại BNI Topaz Chapter",
@@ -327,6 +329,15 @@
       "url": "https://www.bnitopaz.com/2026/10/thiet-ke-website-xuat-hoa-on-ien-tu-tu.html",
       "published": "2026-10-16T00:30:00-07:00",
       "posted_at": "2026-10-11T23:16:16.774517+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Hướng Dẫn Kết Nối Pancake Invoice Với Website Bán Hàng Tự Động 2026",
+      "title": "Hướng Dẫn Kết Nối Pancake Invoice Với Website Bán Hàng Tự Động 2026",
+      "post_id": "6756778965640539458",
+      "url": "https://www.bnitopaz.com/2026/10/huong-dan-ket-noi-pancake-invoice-voi.html",
+      "published": "2026-10-16T16:30:00-07:00",
+      "posted_at": "2026-10-12T02:31:05.059642+00:00",
       "mode": "schedule"
     }
   ]
