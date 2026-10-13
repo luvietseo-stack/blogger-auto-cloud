@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-13T01:55:30.588358+00:00",
-  "total_posted": 37,
+  "last_updated": "2026-10-13T09:11:25.142852+00:00",
+  "total_posted": 38,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -258,7 +258,9 @@
       "url": "https://www.bnitopaz.com/2026/10/hoc-tap-suot-oi-chuong-trinh-ao-tao-oc.html",
       "published": "2026-10-13T00:30:00-07:00",
       "posted_at": "2026-10-10T02:50:20.464497+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-13T09:11:29.455696+00:00"
     },
     {
       "topic": "Bí Quyết Vận Hành Chapter BNI Đạt Danh Hiệu Chapter Kim Cương Xuất Sắc",
@@ -375,6 +377,15 @@
       "url": "https://www.bnitopaz.com/2026/10/template-ban-hang-online-chuan-cro-khoi.html",
       "published": "2026-10-17T16:30:00-07:00",
       "posted_at": "2026-10-13T01:55:30.588335+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Bán Hàng Trên Sàn TMĐT Năm 2026: Vì Sao Càng Ra Nhiều Đơn Lợi Nhuận Càng Teo Tóp?",
+      "title": "Bán Hàng Trên Sàn TMĐT Năm 2026: Vì Sao Càng Ra Nhiều Đơn Lợi Nhuận Càng Teo Tóp?",
+      "post_id": "4566550835145202444",
+      "url": "https://www.bnitopaz.com/2026/10/ban-hang-tren-san-tmt-nam-2026-vi-sao.html",
+      "published": "2026-10-17T21:30:00-07:00",
+      "posted_at": "2026-10-13T09:11:25.142833+00:00",
       "mode": "schedule"
     }
   ]
