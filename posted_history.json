@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-12T19:41:30.523129+00:00",
-  "total_posted": 36,
+  "last_updated": "2026-10-13T01:55:30.588358+00:00",
+  "total_posted": 37,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -172,7 +172,9 @@
       "url": "https://www.bnitopaz.com/2026/10/nghe-thuat-trao-referral-inh-cao-tai.html",
       "published": "2026-10-10T16:30:00-07:00",
       "posted_at": "2026-10-08T07:35:38.202087+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-13T01:55:35.464774+00:00"
     },
     {
       "topic": "Khắc Phục Rào Cản Họp Online: Cách BNI Topaz Giữ Lửa Năng Lượng Đỉnh Cao Mỗi Sáng",
@@ -203,7 +205,9 @@
       "url": "https://www.bnitopaz.com/2026/10/bai-showcase-8-phut-trieu-o-tai-bni.html",
       "published": "2026-10-11T16:30:00-07:00",
       "posted_at": "2026-10-09T00:39:49.838077+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-13T01:55:35.464774+00:00"
     },
     {
       "topic": "Xây Dựng Thương Hiệu Cá Nhân Chuẩn Doanh Nhân Uy Tín Cùng BNI Topaz Online",
@@ -223,7 +227,9 @@
       "url": "https://www.bnitopaz.com/2026/10/vi-sao-smes-can-tham-gia-bni-topaz-ngay.html",
       "published": "2026-10-12T00:30:00-07:00",
       "posted_at": "2026-10-09T14:13:41.227131+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-13T01:55:35.464774+00:00"
     },
     {
       "topic": "Văn Hóa Cảm Ơn Bằng Doanh Thu (Thank You For Closed Business) Tại BNI Topaz",
@@ -232,7 +238,9 @@
       "url": "https://www.bnitopaz.com/2026/10/van-hoa-cam-on-bang-doanh-thu-tai-bni.html",
       "published": "2026-10-12T16:30:00-07:00",
       "posted_at": "2026-10-09T19:36:18.217127+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-13T01:55:35.464774+00:00"
     },
     {
       "topic": "Kỹ Năng Đặt Câu Hỏi Để Khơi Gợi Nhu Cầu Kinh Doanh Cho Đồng Đội BNI Topaz",
@@ -358,6 +366,15 @@
       "url": "https://www.bnitopaz.com/2026/10/cach-chuyen-uid-sang-so-ien-thoai-tuyet.html",
       "published": "2026-10-17T00:30:00-07:00",
       "posted_at": "2026-10-12T19:41:30.523106+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Template Bán Hàng Online Chuẩn CRO: Khởi Tạo Website 30 Giây Không Cần Code",
+      "title": "Template Bán Hàng Online Chuẩn CRO: Khởi Tạo Website 30 Giây",
+      "post_id": "8460752787463492308",
+      "url": "https://www.bnitopaz.com/2026/10/template-ban-hang-online-chuan-cro-khoi.html",
+      "published": "2026-10-17T16:30:00-07:00",
+      "posted_at": "2026-10-13T01:55:30.588335+00:00",
       "mode": "schedule"
     }
   ]
