@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-14T20:09:34.918335+00:00",
-  "total_posted": 45,
+  "last_updated": "2026-10-14T23:19:00.965561+00:00",
+  "total_posted": 46,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -271,7 +271,9 @@
       "url": "https://www.bnitopaz.com/2026/10/bi-quyet-van-hanh-chapter-bni-at-danh.html",
       "published": "2026-10-13T16:30:00-07:00",
       "posted_at": "2026-10-10T09:34:53.115174+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-14T23:19:04.830648+00:00"
     },
     {
       "topic": "Lợi Thế Kết Nối Xuyên Biên Giới Cùng Các Chapter BNI Quốc Tế Nhờ Nền Tảng Online",
@@ -291,7 +293,9 @@
       "url": "https://www.bnitopaz.com/2026/10/chi-phi-tham-gia-bni-topaz-au-tu-hay.html",
       "published": "2026-10-14T00:30:00-07:00",
       "posted_at": "2026-10-10T19:33:16.549479+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-14T23:19:04.830648+00:00"
     },
     {
       "topic": "Vai Trò Của Ban Điều Hành (LT) Trong Sự Thành Công Bứt Phá Của BNI Topaz Chapter",
@@ -453,6 +457,15 @@
       "url": "https://www.bnitopaz.com/2026/10/thue-on-vi-lam-website-10-20-trieu-bay.html",
       "published": "2026-10-20T00:30:00-07:00",
       "posted_at": "2026-10-14T20:09:34.918318+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Tại Sao 80% Website Doanh Nghiệp Vừa Làm Xong Đã Bị Bỏ Hoang Không Ra Đơn?",
+      "title": "Tại Sao 80% Website Doanh Nghiệp Vừa Làm Xong Đã Bị Bỏ Hoang?",
+      "post_id": "2366493355267918258",
+      "url": "https://www.bnitopaz.com/2026/10/tai-sao-80-website-doanh-nghiep-vua-lam.html",
+      "published": "2026-10-20T16:30:00-07:00",
+      "posted_at": "2026-10-14T23:19:00.965541+00:00",
       "mode": "schedule"
     }
   ]
