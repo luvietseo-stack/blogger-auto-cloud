@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-14T11:38:49.393537+00:00",
-  "total_posted": 43,
+  "last_updated": "2026-10-14T15:59:31.069529+00:00",
+  "total_posted": 44,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -280,7 +280,9 @@
       "url": "https://www.bnitopaz.com/2026/10/ket-noi-xuyen-bien-gioi-bni-quoc-te-nho.html",
       "published": "2026-10-13T21:30:00-07:00",
       "posted_at": "2026-10-10T15:34:44.300096+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-14T15:59:34.019459+00:00"
     },
     {
       "topic": "Chi Phí Tham Gia BNI Topaz Là Bao Nhiêu? Phân Tích Bài Toán Đầu Tư Hay Chi Phí",
@@ -433,6 +435,15 @@
       "url": "https://www.bnitopaz.com/2026/10/chi-phi-quang-cao-tiktok-facebook-cat.html",
       "published": "2026-10-19T16:30:00-07:00",
       "posted_at": "2026-10-14T11:38:49.393518+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Nỗi Ám Ảnh Bom Hàng COD: 5 Cách Đơn Giản Giúp Chủ Shop Ép Tỷ Lệ Hoàn Về Dưới 3%",
+      "title": "Nỗi Ám Ảnh Bom Hàng COD: 5 Cách Đơn Giản Ép Tỷ Lệ Hoàn Dưới 3%",
+      "post_id": "870713914911949060",
+      "url": "https://www.bnitopaz.com/2026/10/noi-am-anh-bom-hang-cod-5-cach-on-gian.html",
+      "published": "2026-10-19T21:30:00-07:00",
+      "posted_at": "2026-10-14T15:59:31.069512+00:00",
       "mode": "schedule"
     }
   ]
