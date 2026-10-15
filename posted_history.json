@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-15T06:26:31.771864+00:00",
-  "total_posted": 48,
+  "last_updated": "2026-10-15T12:09:17.384718+00:00",
+  "total_posted": 49,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -304,7 +304,9 @@
       "url": "https://www.bnitopaz.com/2026/10/vai-tro-ban-ieu-hanh-lt-bni-topaz.html",
       "published": "2026-10-14T16:30:00-07:00",
       "posted_at": "2026-10-10T22:56:22.098588+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-15T12:09:21.408558+00:00"
     },
     {
       "topic": "Giải Pháp Đột Phá Cho Doanh Nghiệp Bán Lẻ & Dịch Vụ Tiếp Cận Khách Hàng Doanh Nhân",
@@ -313,7 +315,9 @@
       "url": "https://www.bnitopaz.com/2026/10/giai-phap-ot-pha-cho-doanh-nghiep-ban.html",
       "published": "2026-10-14T21:30:00-07:00",
       "posted_at": "2026-10-11T01:40:20.887359+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-15T12:09:21.408558+00:00"
     },
     {
       "topic": "Lịch Trình 1 Buổi Họp Chuẩn 20 Bước Của BNI Topaz Chapter Diễn Ra Như Thế Nào?",
@@ -322,7 +326,9 @@
       "url": "https://www.bnitopaz.com/2026/10/lich-trinh-1-buoi-hop-chuan-20-buoc-cua.html",
       "published": "2026-10-15T00:30:00-07:00",
       "posted_at": "2026-10-11T07:51:00.321239+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-15T12:09:21.408558+00:00"
     },
     {
       "topic": "Hướng Dẫn Đăng Ký Tham Quan BNI Topaz Chapter Online Ngay Tuần Này",
@@ -484,6 +490,15 @@
       "url": "https://www.bnitopaz.com/2026/10/cuoc-chien-pha-gia-khoc-liet-tren-san.html",
       "published": "2026-10-21T00:30:00-07:00",
       "posted_at": "2026-10-15T06:26:31.771846+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Bán Hàng Qua Inbox Cá Nhân: Những Lỗ Hổng Khiến Bạn Mất 60% Doanh Thu Tiềm Năng",
+      "title": "Bán Hàng Qua Inbox Cá Nhân: Lỗ Hổng Mất 60% Doanh Thu",
+      "post_id": "8866183113094143119",
+      "url": "https://www.bnitopaz.com/2026/10/ban-hang-qua-inbox-ca-nhan-lo-hong-mat.html",
+      "published": "2026-10-21T16:30:00-07:00",
+      "posted_at": "2026-10-15T12:09:17.384698+00:00",
       "mode": "schedule"
     }
   ]
