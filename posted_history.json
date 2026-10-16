@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-16T11:54:39.127860+00:00",
-  "total_posted": 55,
+  "last_updated": "2026-10-16T16:16:41.491005+00:00",
+  "total_posted": 56,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -355,7 +355,9 @@
       "url": "https://www.bnitopaz.com/2026/10/thiet-ke-website-xuat-hoa-on-ien-tu-tu.html",
       "published": "2026-10-16T00:30:00-07:00",
       "posted_at": "2026-10-11T23:16:16.774517+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-16T16:16:51.407160+00:00"
     },
     {
       "topic": "Hướng Dẫn Kết Nối Pancake Invoice Với Website Bán Hàng Tự Động 2026",
@@ -553,6 +555,15 @@
       "url": "https://www.bnitopaz.com/2026/10/bai-toan-dong-tien-kinh-doanh-online.html",
       "published": "2026-10-23T16:30:00-07:00",
       "posted_at": "2026-10-16T11:54:39.127841+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Rủi Ro Khi Phụ Thuộc 100% Vào Nền Tảng Bên Thứ Ba Và Chiến Lược Xây Dựng Sân Nhà Vững Chắc",
+      "title": "Rủi Ro Khi Phụ Thuộc 100% Vào Nền Tảng Bên Thứ Ba & Chiến Lược Sân Nhà Vững Chắc",
+      "post_id": "8182297079166719949",
+      "url": "https://www.bnitopaz.com/2026/10/rui-ro-khi-phu-thuoc-100-vao-nen-tang.html",
+      "published": "2026-10-23T21:30:00-07:00",
+      "posted_at": "2026-10-16T16:16:41.490988+00:00",
       "mode": "schedule"
     }
   ]
