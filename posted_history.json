@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-16T16:16:41.491005+00:00",
-  "total_posted": 56,
+  "last_updated": "2026-10-16T19:38:44.681121+00:00",
+  "total_posted": 57,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -337,7 +337,9 @@
       "url": "https://www.bnitopaz.com/2026/10/ang-ky-tham-quan-bni-topaz-chapter.html",
       "published": "2026-10-15T16:30:00-07:00",
       "posted_at": "2026-10-11T14:49:29.932185+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-16T19:38:48.552346+00:00"
     },
     {
       "topic": "Landing Page Bất Động Sản Chuẩn SEO: Bí Quyết Chốt Khách Hàng Triệu Đô 2026",
@@ -564,6 +566,15 @@
       "url": "https://www.bnitopaz.com/2026/10/rui-ro-khi-phu-thuoc-100-vao-nen-tang.html",
       "published": "2026-10-23T21:30:00-07:00",
       "posted_at": "2026-10-16T16:16:41.490988+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Tư Duy Xây Hệ Thống Bán Hàng Tự Động Hóa: 1 Người Vẫn Vận Hành Trơn Tru Hàng Trăm Đơn/Ngày",
+      "title": "Tư Duy Xây Hệ Thống Bán Hàng Tự Động Hóa: 1 Người Vẫn Vận Hành Trơn Tru Hàng Trăm Đơn/Ngày",
+      "post_id": "3830132725300074758",
+      "url": "https://www.bnitopaz.com/2026/10/tu-duy-xay-he-thong-ban-hang-tu-ong-hoa.html",
+      "published": "2026-10-24T00:30:00-07:00",
+      "posted_at": "2026-10-16T19:38:44.681103+00:00",
       "mode": "schedule"
     }
   ]
