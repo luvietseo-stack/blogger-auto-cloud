@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-17T09:11:30.380250+00:00",
-  "total_posted": 61,
+  "last_updated": "2026-10-17T13:02:53.242407+00:00",
+  "total_posted": 62,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -381,7 +381,9 @@
       "url": "https://www.bnitopaz.com/2026/10/thiet-ke-website-ong-nai-chuan-seo-dich.html",
       "published": "2026-10-16T21:30:00-07:00",
       "posted_at": "2026-10-12T09:48:52.929563+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-17T13:03:00.673210+00:00"
     },
     {
       "topic": "Cách Chuyển UID Sang Số Điện Thoại: Tuyệt Chiêu Chốt Sale Bán Hàng 2026",
@@ -390,7 +392,9 @@
       "url": "https://www.bnitopaz.com/2026/10/cach-chuyen-uid-sang-so-ien-thoai-tuyet.html",
       "published": "2026-10-17T00:30:00-07:00",
       "posted_at": "2026-10-12T19:41:30.523106+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-17T13:03:00.673210+00:00"
     },
     {
       "topic": "Template Bán Hàng Online Chuẩn CRO: Khởi Tạo Website 30 Giây Không Cần Code",
@@ -615,6 +619,15 @@
       "url": "https://www.bnitopaz.com/2026/10/tu-ong-ay-on-sang-ghtk-ghn-viettel-post.html",
       "published": "2026-10-25T16:30:00-07:00",
       "posted_at": "2026-10-17T09:11:30.380233+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Cách Tự Động Tính Phí Vận Chuyển Theo Từng Xã/Phường Chuẩn Xác 100% Cho Website Của Bạn",
+      "title": "Cách Tự Động Tính Phí Vận Chuyển Theo Từng Xã/Phường Chuẩn Xác 100%",
+      "post_id": "2268775267291169245",
+      "url": "https://www.bnitopaz.com/2026/10/cach-tu-ong-tinh-phi-van-chuyen-theo.html",
+      "published": "2026-10-25T21:30:00-07:00",
+      "posted_at": "2026-10-17T13:02:53.242387+00:00",
       "mode": "schedule"
     }
   ]
