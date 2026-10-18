@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-18T01:12:13.753900+00:00",
-  "total_posted": 67,
+  "last_updated": "2026-10-18T06:03:41.026071+00:00",
+  "total_posted": 68,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -414,7 +414,9 @@
       "url": "https://www.bnitopaz.com/2026/10/ban-hang-tren-san-tmt-nam-2026-vi-sao.html",
       "published": "2026-10-17T21:30:00-07:00",
       "posted_at": "2026-10-13T09:11:25.142833+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-18T06:03:43.791721+00:00"
     },
     {
       "topic": "Chi Phí Sàn TMĐT Lên Đến 18-25%: Bóc Tách Các Loại Phí Ẩn Đang Bào Mòn Lợi Nhuận Của Bạn",
@@ -675,6 +677,15 @@
       "url": "https://www.bnitopaz.com/2026/10/quy-trinh-xu-ly-on-hang-tu-15-phut.html",
       "published": "2026-10-27T16:30:00-07:00",
       "posted_at": "2026-10-18T01:12:13.753882+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Email Marketing Tự Động Cứu Giỏ Hàng Bỏ Quên: Cách Lấy Lại 30% Đơn Hàng Tưởng Chừng Đã Mất",
+      "title": "Email Marketing Tự Động Cứu Giỏ Hàng Bỏ Quên: Lấy Lại 30% Đơn",
+      "post_id": "7286538936672953549",
+      "url": "https://www.bnitopaz.com/2026/10/email-marketing-tu-ong-cuu-gio-hang-bo.html",
+      "published": "2026-10-27T21:30:00-07:00",
+      "posted_at": "2026-10-18T06:03:41.026053+00:00",
       "mode": "schedule"
     }
   ]
