@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-18T11:22:56.125586+00:00",
-  "total_posted": 69,
+  "last_updated": "2026-10-18T14:48:53.519242+00:00",
+  "total_posted": 70,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -425,7 +425,9 @@
       "url": "https://www.bnitopaz.com/2026/10/chi-phi-san-tmt-len-en-18-25-boc-tach.html",
       "published": "2026-10-18T00:30:00-07:00",
       "posted_at": "2026-10-13T17:01:58.031582+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-18T14:48:56.837560+00:00"
     },
     {
       "topic": "Hiểm Họa Mất Trắng Doanh Nghiệp Khi Bị Khóa Shop TMĐT & Bài Học Tự Chủ Kênh Bán Hàng",
@@ -695,6 +697,15 @@
       "url": "https://www.bnitopaz.com/2026/10/xay-dung-quy-trinh-remarketing-0-ong.html",
       "published": "2026-10-28T00:30:00-07:00",
       "posted_at": "2026-10-18T11:22:56.125569+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Bảng So Sánh Sản Phẩm Trực Quan: Đòn Bẩy Giúp Khách Hàng Nâng Cấp Lên Gói Combo Đắt Tiền Hơn",
+      "title": "Bảng So Sánh Sản Phẩm Trực Quan: Đòn Bẩy Nâng Cấp Gói Cao Cấp",
+      "post_id": "29579006581881518",
+      "url": "https://www.bnitopaz.com/2026/10/bang-so-sanh-san-pham-truc-quan-on-bay.html",
+      "published": "2026-10-28T16:30:00-07:00",
+      "posted_at": "2026-10-18T14:48:53.519224+00:00",
       "mode": "schedule"
     }
   ]
