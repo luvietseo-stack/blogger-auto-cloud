@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-17T23:13:59.563697+00:00",
-  "total_posted": 66,
+  "last_updated": "2026-10-18T01:12:13.753900+00:00",
+  "total_posted": 67,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -403,7 +403,9 @@
       "url": "https://www.bnitopaz.com/2026/10/template-ban-hang-online-chuan-cro-khoi.html",
       "published": "2026-10-17T16:30:00-07:00",
       "posted_at": "2026-10-13T01:55:30.588335+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-18T01:12:16.876610+00:00"
     },
     {
       "topic": "Bán Hàng Trên Sàn TMĐT Năm 2026: Vì Sao Càng Ra Nhiều Đơn Lợi Nhuận Càng Teo Tóp?",
@@ -664,6 +666,15 @@
       "url": "https://www.bnitopaz.com/2026/10/toi-uu-sticky-cta-bar-tang-35-luot-bam.html",
       "published": "2026-10-27T00:30:00-07:00",
       "posted_at": "2026-10-17T23:13:59.563678+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Quy Trình Xử Lý Đơn Hàng Từ 15 Phút Xuống 15 Giây Nhờ Tự Động In Tem Mã Vận Đơn A6",
+      "title": "Quy Trình Xử Lý Đơn Hàng Từ 15 Phút Xuống 15 Giây Nhờ Tem A6",
+      "post_id": "2505338929984173596",
+      "url": "https://www.bnitopaz.com/2026/10/quy-trinh-xu-ly-on-hang-tu-15-phut.html",
+      "published": "2026-10-27T16:30:00-07:00",
+      "posted_at": "2026-10-18T01:12:13.753882+00:00",
       "mode": "schedule"
     }
   ]
