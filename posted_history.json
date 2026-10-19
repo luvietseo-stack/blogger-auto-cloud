@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-19T10:58:48.977416+00:00",
-  "total_posted": 76,
+  "last_updated": "2026-10-19T17:25:49.881559+00:00",
+  "total_posted": 77,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -447,7 +447,9 @@
       "url": "https://www.bnitopaz.com/2026/10/ban-hang-nghin-on-tren-san-vi-sao-chua.html",
       "published": "2026-10-18T21:30:00-07:00",
       "posted_at": "2026-10-14T01:04:18.916253+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-19T17:25:53.225613+00:00"
     },
     {
       "topic": "Chạy Ads Facebook Ra Hàng Trăm Tin Nhắn Nhưng Tỷ Lệ Chốt Dưới 5%: Đâu Là Nguyên Nhân Thật Sự?",
@@ -456,7 +458,9 @@
       "url": "https://www.bnitopaz.com/2026/10/chay-ads-facebook-ra-hang-tram-tin-nhan.html",
       "published": "2026-10-19T00:30:00-07:00",
       "posted_at": "2026-10-14T05:58:38.507725+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-19T17:25:53.225613+00:00"
     },
     {
       "topic": "Chi Phí Quảng Cáo TikTok & Facebook Ngày Càng Đắt: Bí Quyết Cắt Giảm 50% Ngân Sách Nhờ Landing Page",
@@ -762,6 +766,15 @@
       "url": "https://www.bnitopaz.com/2026/10/checklist-15-buoc-toi-uu-uxui-cho.html",
       "published": "2026-10-30T16:30:00-07:00",
       "posted_at": "2026-10-19T10:58:48.977396+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Bí Quyết Thiết Kế Combo Sản Phẩm Tăng Giá Trị Trung Bình Trên Mỗi Đơn Hàng (AOV)",
+      "title": "Bí Quyết Thiết Kế Combo Sản Phẩm Tăng AOV & Mở Rộng Hệ Sinh Thái",
+      "post_id": "4487392143755674579",
+      "url": "https://www.bnitopaz.com/2026/10/bi-quyet-thiet-ke-combo-san-pham-tang.html",
+      "published": "2026-10-30T21:30:00-07:00",
+      "posted_at": "2026-10-19T17:25:49.881542+00:00",
       "mode": "schedule"
     }
   ]
