@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-19T21:45:28.336969+00:00",
-  "total_posted": 78,
+  "last_updated": "2026-10-20T00:57:41.428903+00:00",
+  "total_posted": 79,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -469,7 +469,9 @@
       "url": "https://www.bnitopaz.com/2026/10/chi-phi-quang-cao-tiktok-facebook-cat.html",
       "published": "2026-10-19T16:30:00-07:00",
       "posted_at": "2026-10-14T11:38:49.393518+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-20T00:57:44.496147+00:00"
     },
     {
       "topic": "Nỗi Ám Ảnh Bom Hàng COD: 5 Cách Đơn Giản Giúp Chủ Shop Ép Tỷ Lệ Hoàn Về Dưới 3%",
@@ -784,6 +786,15 @@
       "url": "https://www.bnitopaz.com/2026/10/ai-chatbot-gemini-247-nhan-vien-tu-van.html",
       "published": "2026-10-31T00:30:00-07:00",
       "posted_at": "2026-10-19T21:45:28.336955+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Cách Huấn Luyện AI Đóng Vai Chuyên Gia Tư Vấn Đúng Kiến Thức Sản Phẩm Của Cửa Hàng Bạn",
+      "title": "Cách Huấn Luyện AI Đóng Vai Chuyên Gia Tư Vấn Cho Cửa Hàng",
+      "post_id": "178745381064608031",
+      "url": "https://www.bnitopaz.com/2026/10/cach-huan-luyen-ai-ong-vai-chuyen-gia.html",
+      "published": "2026-10-31T16:30:00-07:00",
+      "posted_at": "2026-10-20T00:57:41.428886+00:00",
       "mode": "schedule"
     }
   ]
