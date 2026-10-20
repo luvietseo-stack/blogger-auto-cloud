@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-20T00:57:41.428903+00:00",
-  "total_posted": 79,
+  "last_updated": "2026-10-20T05:49:01.045477+00:00",
+  "total_posted": 80,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -480,7 +480,9 @@
       "url": "https://www.bnitopaz.com/2026/10/noi-am-anh-bom-hang-cod-5-cach-on-gian.html",
       "published": "2026-10-19T21:30:00-07:00",
       "posted_at": "2026-10-14T15:59:31.069512+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-20T05:49:03.927738+00:00"
     },
     {
       "topic": "Thuê Đơn Vị Làm Website 10-20 Triệu: Những Bẫy Chi Phí Và Bất Cập Chủ Shop Cần Biết",
@@ -795,6 +797,15 @@
       "url": "https://www.bnitopaz.com/2026/10/cach-huan-luyen-ai-ong-vai-chuyen-gia.html",
       "published": "2026-10-31T16:30:00-07:00",
       "posted_at": "2026-10-20T00:57:41.428886+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Tự Động Hóa Viết Bài Chuẩn SEO 1500 Chữ Với AI Chỉ Trong 2 Phút Không Cần Thuê Content",
+      "title": "Tự Động Hóa Viết Bài Chuẩn SEO 1500 Chữ Với AI Trong 2 Phút",
+      "post_id": "4583466003649004162",
+      "url": "https://www.bnitopaz.com/2026/10/tu-ong-hoa-viet-bai-chuan-seo-1500-chu.html",
+      "published": "2026-10-31T21:30:00-07:00",
+      "posted_at": "2026-10-20T05:49:01.045457+00:00",
       "mode": "schedule"
     }
   ]
