@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-21T20:55:41.552607+00:00",
-  "total_posted": 89,
+  "last_updated": "2026-10-21T23:56:43.011517+00:00",
+  "total_posted": 90,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -535,7 +535,9 @@
       "url": "https://www.bnitopaz.com/2026/10/ban-hang-qua-inbox-ca-nhan-lo-hong-mat.html",
       "published": "2026-10-21T16:30:00-07:00",
       "posted_at": "2026-10-15T12:09:17.384698+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-21T23:56:46.358318+00:00"
     },
     {
       "topic": "Nghệ Thuật Giữ Chân Khách Cũ: Vì Sao Chi Phí Kiếm Khách Mới Đắt Gấp 7 Lần Chăm Sóc Lại?",
@@ -895,6 +897,15 @@
       "url": "https://www.bnitopaz.com/2026/11/kich-ban-xu-ly-tu-choi-mua-hang-cuc.html",
       "published": "2026-11-03T20:30:00-08:00",
       "posted_at": "2026-10-21T20:55:41.552590+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Tương Lai Của E-Commerce 2026: Doanh Nghiệp Không Dùng AI Sẽ Bị Đào Thải Ra Sao?",
+      "title": "Tương Lai Của E-Commerce 2026: Doanh Nghiệp Không Dùng AI Bị Đào Thải",
+      "post_id": "899316358815360932",
+      "url": "https://www.bnitopaz.com/2026/11/tuong-lai-cua-e-commerce-2026-doanh.html",
+      "published": "2026-11-03T23:30:00-08:00",
+      "posted_at": "2026-10-21T23:56:43.011496+00:00",
       "mode": "schedule"
     }
   ]
