@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-21T06:38:51.569660+00:00",
-  "total_posted": 86,
+  "last_updated": "2026-10-21T12:23:18.407198+00:00",
+  "total_posted": 87,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -524,7 +524,9 @@
       "url": "https://www.bnitopaz.com/2026/10/cuoc-chien-pha-gia-khoc-liet-tren-san.html",
       "published": "2026-10-21T00:30:00-07:00",
       "posted_at": "2026-10-15T06:26:31.771846+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-21T12:23:22.025587+00:00"
     },
     {
       "topic": "Bán Hàng Qua Inbox Cá Nhân: Những Lỗ Hổng Khiến Bạn Mất 60% Doanh Thu Tiềm Năng",
@@ -866,6 +868,15 @@
       "url": "https://www.bnitopaz.com/2026/11/bi-quyet-dung-ai-nghien-cuu-bo-tu-khoa.html",
       "published": "2026-11-02T20:30:00-08:00",
       "posted_at": "2026-10-21T06:38:51.569642+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Xây Dựng Cỗ Máy Sản Xuất Nội Dung Đa Kênh Tự Động Cho Fanpage Và Blog Nhờ AI",
+      "title": "Cỗ Máy Sản Xuất Nội Dung Đa Kênh Tự Động Nhờ AI Cho Doanh Nghiệp",
+      "post_id": "877645705869247756",
+      "url": "https://www.bnitopaz.com/2026/11/co-may-san-xuat-noi-dung-kenh-tu-ong.html",
+      "published": "2026-11-02T23:30:00-08:00",
+      "posted_at": "2026-10-21T12:23:18.407181+00:00",
       "mode": "schedule"
     }
   ]
