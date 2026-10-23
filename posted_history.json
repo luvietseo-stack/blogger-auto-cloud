@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-23T05:53:25.198786+00:00",
-  "total_posted": 97,
+  "last_updated": "2026-10-23T11:16:17.137523+00:00",
+  "total_posted": 98,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -579,7 +579,9 @@
       "url": "https://www.bnitopaz.com/2026/10/ban-hang-kenh-cho-nguoi-it-von-bat-au.html",
       "published": "2026-10-22T21:30:00-07:00",
       "posted_at": "2026-10-16T01:31:31.161459+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-23T11:16:23.057938+00:00"
     },
     {
       "topic": "Vì Sao Website Của Bạn Tải Chậm Quá 3 Giây Khiến Khách Hàng Thoát Trang Hàng Loạt?",
@@ -588,7 +590,9 @@
       "url": "https://www.bnitopaz.com/2026/10/vi-sao-website-cua-ban-tai-cham-qua-3.html",
       "published": "2026-10-23T00:30:00-07:00",
       "posted_at": "2026-10-16T06:21:32.396087+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-23T11:16:23.057938+00:00"
     },
     {
       "topic": "Bài Toán Dòng Tiền Kinh Doanh Online: Đọng Vốn Tiền COD Và Cách Thu Tiền Ngay Về Tài Khoản",
@@ -975,6 +979,15 @@
       "url": "https://www.bnitopaz.com/2026/11/nganh-f-tao-menu-at-mon-truc-tuyen-1.html",
       "published": "2026-11-06T15:30:00-08:00",
       "posted_at": "2026-10-23T05:53:25.198763+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Ngành Nông Sản & Đặc Sản Vùng Miền: Kể Câu Chuyện Nguồn Gốc Xuất Xứ Hút Khách Mua Làm Quà",
+      "title": "Ngành Nông Sản & Đặc Sản Vùng Miền: Kể Chuyện Nguồn Gốc Hút Khách Làm Quà",
+      "post_id": "2395740927088905931",
+      "url": "https://www.bnitopaz.com/2026/11/nganh-nong-san-ac-san-vung-mien-ke.html",
+      "published": "2026-11-06T20:30:00-08:00",
+      "posted_at": "2026-10-23T11:16:17.137507+00:00",
       "mode": "schedule"
     }
   ]
