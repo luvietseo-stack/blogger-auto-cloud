@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-22T22:12:28.624428+00:00",
-  "total_posted": 95,
+  "last_updated": "2026-10-23T00:50:09.516183+00:00",
+  "total_posted": 96,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -568,7 +568,9 @@
       "url": "https://www.bnitopaz.com/2026/10/khach-hoi-gia-xong-im-lang-cach-cham.html",
       "published": "2026-10-22T16:30:00-07:00",
       "posted_at": "2026-10-15T23:19:38.303129+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-23T00:50:12.760706+00:00"
     },
     {
       "topic": "Bán Hàng Đa Kênh (Omnichannel) Cho Người Ít Vốn: Bắt Đầu Từ Đâu Để Không Bị Ngợp?",
@@ -955,6 +957,15 @@
       "url": "https://www.bnitopaz.com/2026/11/nganh-thuc-pham-chuc-nang-dung-landing.html",
       "published": "2026-11-05T20:30:00-08:00",
       "posted_at": "2026-10-22T22:12:28.624411+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Ngành Đồ Gia Dụng Thông Minh: Sử Dụng Video Minh Họa & GIF Trên Trang Đích Để Bùng Nổ Đơn Hàng",
+      "title": "Ngành Đồ Gia Dụng Thông Minh: Video, GIF Bùng Nổ Đơn Hàng",
+      "post_id": "7842314574922044285",
+      "url": "https://www.bnitopaz.com/2026/11/nganh-o-gia-dung-thong-minh-video-gif.html",
+      "published": "2026-11-05T23:30:00-08:00",
+      "posted_at": "2026-10-23T00:50:09.516163+00:00",
       "mode": "schedule"
     }
   ]
