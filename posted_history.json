@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-24T01:29:54.442202+00:00",
-  "total_posted": 102,
+  "last_updated": "2026-10-24T06:32:22.987270+00:00",
+  "total_posted": 103,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -612,7 +612,9 @@
       "url": "https://www.bnitopaz.com/2026/10/rui-ro-khi-phu-thuoc-100-vao-nen-tang.html",
       "published": "2026-10-23T21:30:00-07:00",
       "posted_at": "2026-10-16T16:16:41.490988+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-24T06:32:26.451509+00:00"
     },
     {
       "topic": "Tư Duy Xây Hệ Thống Bán Hàng Tự Động Hóa: 1 Người Vẫn Vận Hành Trơn Tru Hàng Trăm Đơn/Ngày",
@@ -1026,6 +1028,15 @@
       "url": "https://www.bnitopaz.com/2026/11/danh-cho-spa-tham-my-vien-trang-ich-tu.html",
       "published": "2026-11-07T23:30:00-08:00",
       "posted_at": "2026-10-24T01:29:54.442186+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Ngành Nội Thất & Đồ Trang Trí Nhà Cửa: Trưng Bày Không Gian Sống Thực Tế Thúc Đẩy Mua Sắm",
+      "title": "Ngành Nội Thất & Đồ Trang Trí Nhà Cửa: Trưng Bày Đột Phá",
+      "post_id": "4619710821197811032",
+      "url": "https://www.bnitopaz.com/2026/11/nganh-noi-that-o-trang-tri-nha-cua.html",
+      "published": "2026-11-08T15:30:00-08:00",
+      "posted_at": "2026-10-24T06:32:22.987253+00:00",
       "mode": "schedule"
     }
   ]
