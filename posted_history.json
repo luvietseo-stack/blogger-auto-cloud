@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-24T06:32:22.987270+00:00",
-  "total_posted": 103,
+  "last_updated": "2026-10-24T11:37:32.988797+00:00",
+  "total_posted": 104,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -623,7 +623,9 @@
       "url": "https://www.bnitopaz.com/2026/10/tu-duy-xay-he-thong-ban-hang-tu-ong-hoa.html",
       "published": "2026-10-24T00:30:00-07:00",
       "posted_at": "2026-10-16T19:38:44.681103+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-24T11:37:36.919346+00:00"
     },
     {
       "topic": "Landing Page Chuẩn CRO Là Gì? Bí Quyết Tăng Gấp Đôi Tỷ Lệ Đặt Hàng Mà Không Tăng Tiền Ads",
@@ -1037,6 +1039,15 @@
       "url": "https://www.bnitopaz.com/2026/11/nganh-noi-that-o-trang-tri-nha-cua.html",
       "published": "2026-11-08T15:30:00-08:00",
       "posted_at": "2026-10-24T06:32:22.987253+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Ngành Trang Sức & Quà Tặng: Tạo Giao Diện Sang Trọng, Tích Hợp Tùy Chọn Khắc Tên Theo Yêu Cầu",
+      "title": "Ngành Trang Sức & Quà Tặng: Giao Diện Sang Trọng & Tùy Biến",
+      "post_id": "7085490411313922374",
+      "url": "https://www.bnitopaz.com/2026/11/nganh-trang-suc-qua-tang-giao-dien-sang.html",
+      "published": "2026-11-08T20:30:00-08:00",
+      "posted_at": "2026-10-24T11:37:32.988779+00:00",
       "mode": "schedule"
     }
   ]
