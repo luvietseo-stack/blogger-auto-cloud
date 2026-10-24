@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-23T23:01:30.209547+00:00",
-  "total_posted": 101,
+  "last_updated": "2026-10-24T01:29:54.442202+00:00",
+  "total_posted": 102,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -601,7 +601,9 @@
       "url": "https://www.bnitopaz.com/2026/10/bai-toan-dong-tien-kinh-doanh-online.html",
       "published": "2026-10-23T16:30:00-07:00",
       "posted_at": "2026-10-16T11:54:39.127841+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-24T01:29:57.885635+00:00"
     },
     {
       "topic": "Rủi Ro Khi Phụ Thuộc 100% Vào Nền Tảng Bên Thứ Ba Và Chiến Lược Xây Dựng Sân Nhà Vững Chắc",
@@ -1015,6 +1017,15 @@
       "url": "https://www.bnitopaz.com/2026/11/danh-cho-khoa-hoc-digital-product-ban.html",
       "published": "2026-11-07T20:30:00-08:00",
       "posted_at": "2026-10-23T23:01:30.209530+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Dành Cho Dịch Vụ Spa / Thẩm Mỹ Viện: Trang Đích Đặt Lịch Hẹn Tư Vấn Tự Động Khóa Khung Giờ",
+      "title": "Dành Cho Spa / Thẩm Mỹ Viện: Trang Đích Tự Động Khóa Khung Giờ",
+      "post_id": "3037821996994272775",
+      "url": "https://www.bnitopaz.com/2026/11/danh-cho-spa-tham-my-vien-trang-ich-tu.html",
+      "published": "2026-11-07T23:30:00-08:00",
+      "posted_at": "2026-10-24T01:29:54.442186+00:00",
       "mode": "schedule"
     }
   ]
