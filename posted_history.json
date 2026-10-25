@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-25T00:54:54.598809+00:00",
-  "total_posted": 109,
+  "last_updated": "2026-10-25T05:54:07.888021+00:00",
+  "total_posted": 110,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -645,7 +645,9 @@
       "url": "https://www.bnitopaz.com/2026/10/form-at-hang-1-cham-toi-uu-ty-le-chot.html",
       "published": "2026-10-24T21:30:00-07:00",
       "posted_at": "2026-10-17T00:35:44.224417+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-25T05:54:11.406203+00:00"
     },
     {
       "topic": "Công Nghệ VietQR Động: Giải Pháp Quét Mã Trả Tiền Trong 3 Giây Đột Phá Doanh Số Shop Online",
@@ -1095,6 +1097,15 @@
       "url": "https://www.bnitopaz.com/2026/11/so-sanh-myluvietcom-vs-shopify.html",
       "published": "2026-11-10T15:30:00-08:00",
       "posted_at": "2026-10-25T00:54:54.598790+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Hướng Dẫn Trỏ Tên Miền Riêng (.VN / .COM) Về Website Bán Hàng Của Bạn Chỉ Mất 3 Phút",
+      "title": "Hướng Dẫn Trỏ Tên Miền Riêng Về Website Bán Hàng Chỉ Mất 3 Phút",
+      "post_id": "2718610691519428670",
+      "url": "https://www.bnitopaz.com/2026/11/huong-dan-tro-ten-mien-rieng-ve-website.html",
+      "published": "2026-11-10T20:30:00-08:00",
+      "posted_at": "2026-10-25T05:54:07.888004+00:00",
       "mode": "schedule"
     }
   ]
