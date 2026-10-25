@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-24T22:44:58.140730+00:00",
-  "total_posted": 108,
+  "last_updated": "2026-10-25T00:54:54.598809+00:00",
+  "total_posted": 109,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -634,7 +634,9 @@
       "url": "https://www.bnitopaz.com/2026/10/landing-page-chuan-cro-la-gi-bi-quyet.html",
       "published": "2026-10-24T16:30:00-07:00",
       "posted_at": "2026-10-16T22:16:18.453390+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-25T00:54:57.445487+00:00"
     },
     {
       "topic": "Form Đặt Hàng 1-Chạm (1-Click Checkout): Trải Nghiệm Mua Sắm Siêu Tốc Giúp Khách Không Kịp Đắn Đo",
@@ -1084,6 +1086,15 @@
       "url": "https://www.bnitopaz.com/2026/11/tu-tao-website-ban-hang-chuan-quoc-te.html",
       "published": "2026-11-09T23:30:00-08:00",
       "posted_at": "2026-10-24T22:44:58.140711+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "So Sánh Toàn Diện: my.luviet.com vs Shopify vs WooCommerce vs Ladipage — Đâu Là Lựa Chọn Tối Ưu?",
+      "title": "So Sánh my.luviet.com vs Shopify, WooCommerce, Ladipage",
+      "post_id": "3020003760367409150",
+      "url": "https://www.bnitopaz.com/2026/11/so-sanh-myluvietcom-vs-shopify.html",
+      "published": "2026-11-10T15:30:00-08:00",
+      "posted_at": "2026-10-25T00:54:54.598790+00:00",
       "mode": "schedule"
     }
   ]
