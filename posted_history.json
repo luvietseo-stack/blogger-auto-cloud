@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-26T06:31:05.104103+00:00",
-  "total_posted": 117,
+  "last_updated": "2026-10-26T13:35:33.823219+00:00",
+  "total_posted": 118,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -689,7 +689,9 @@
       "url": "https://www.bnitopaz.com/2026/10/7-khoi-hieu-ung-tam-ly-tang-vot-ty-le.html",
       "published": "2026-10-26T00:30:00-07:00",
       "posted_at": "2026-10-17T16:31:12.214237+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-26T13:35:37.294125+00:00"
     },
     {
       "topic": "Ứng Dụng Hiệu Ứng FOMO (Sợ Bỏ Lỡ) Đúng Cách Để Kích Thích Khách Hàng Ra Quyết Định Trong 60 Giây",
@@ -1175,6 +1177,15 @@
       "url": "https://www.bnitopaz.com/2026/11/huong-dan-gan-ma-pixel-ga-o-luong.html",
       "published": "2026-11-12T23:30:00-08:00",
       "posted_at": "2026-10-26T06:31:05.104085+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Quản Lý Tồn Kho & Cảnh Báo Hết Hàng Tự Động Tránh Tình Trạng Bị Lố Đơn Cho Khách",
+      "title": "Quản Lý Tồn Kho & Cảnh Báo Hết Hàng Tự Động: Tránh Lố Đơn Cho Khách!",
+      "post_id": "3467032717275567802",
+      "url": "https://www.bnitopaz.com/2026/11/quan-ly-ton-kho-canh-bao-het-hang-tu.html",
+      "published": "2026-11-13T15:30:00-08:00",
+      "posted_at": "2026-10-26T13:35:33.823199+00:00",
       "mode": "schedule"
     }
   ]
