@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-26T01:25:44.936126+00:00",
-  "total_posted": 116,
+  "last_updated": "2026-10-26T06:31:05.104103+00:00",
+  "total_posted": 117,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -678,7 +678,9 @@
       "url": "https://www.bnitopaz.com/2026/10/cach-tu-ong-tinh-phi-van-chuyen-theo.html",
       "published": "2026-10-25T21:30:00-07:00",
       "posted_at": "2026-10-17T13:02:53.242387+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-26T06:31:08.934920+00:00"
     },
     {
       "topic": "7 Khối Hiệu Ứng Tâm Lý Đỉnh Cao Giúp Landing Page Tăng Vọt Tỷ Lệ Chốt Sale",
@@ -1164,6 +1166,15 @@
       "url": "https://www.bnitopaz.com/2026/11/cach-tao-ma-giam-gia-voucher-khuyen-mai.html",
       "published": "2026-11-12T20:30:00-08:00",
       "posted_at": "2026-10-26T01:25:44.936110+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Hướng Dẫn Gắn Mã Pixel Facebook, TikTok & Google Analytics Theo Dõi Chuyển Đổi Chính Xác 100%",
+      "title": "Hướng Dẫn Gắn Mã Pixel & GA Đo Lường Chuyển Đổi 100%",
+      "post_id": "1632348352218055693",
+      "url": "https://www.bnitopaz.com/2026/11/huong-dan-gan-ma-pixel-ga-o-luong.html",
+      "published": "2026-11-12T23:30:00-08:00",
+      "posted_at": "2026-10-26T06:31:05.104085+00:00",
       "mode": "schedule"
     }
   ]
