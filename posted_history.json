@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-28T02:24:48.589646+00:00",
-  "total_posted": 126,
+  "last_updated": "2026-10-28T08:59:39.723384+00:00",
+  "total_posted": 127,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -733,7 +733,9 @@
       "url": "https://www.bnitopaz.com/2026/10/quy-trinh-xu-ly-on-hang-tu-15-phut.html",
       "published": "2026-10-27T16:30:00-07:00",
       "posted_at": "2026-10-18T01:12:13.753882+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-28T08:59:43.039425+00:00"
     },
     {
       "topic": "Email Marketing Tự Động Cứu Giỏ Hàng Bỏ Quên: Cách Lấy Lại 30% Đơn Hàng Tưởng Chừng Đã Mất",
@@ -742,7 +744,9 @@
       "url": "https://www.bnitopaz.com/2026/10/email-marketing-tu-ong-cuu-gio-hang-bo.html",
       "published": "2026-10-27T21:30:00-07:00",
       "posted_at": "2026-10-18T06:03:41.026053+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-28T08:59:43.039425+00:00"
     },
     {
       "topic": "Xây Dựng Quy Trình Remarketing 0 Đồng Cho Khách Hàng Cũ Bằng Hệ Thống CRM Tích Hợp Sẵn",
@@ -751,7 +755,9 @@
       "url": "https://www.bnitopaz.com/2026/10/xay-dung-quy-trinh-remarketing-0-ong.html",
       "published": "2026-10-28T00:30:00-07:00",
       "posted_at": "2026-10-18T11:22:56.125569+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-28T08:59:43.039425+00:00"
     },
     {
       "topic": "Bảng So Sánh Sản Phẩm Trực Quan: Đòn Bẩy Giúp Khách Hàng Nâng Cấp Lên Gói Combo Đắt Tiền Hơn",
@@ -1264,6 +1270,15 @@
       "url": "https://www.bnitopaz.com/2026/11/cach-freelancer-ban-giao-website-ban.html",
       "published": "2026-11-15T23:30:00-08:00",
       "posted_at": "2026-10-28T02:24:48.589625+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Chiến Lược Nhân Bản Chuỗi 10+ Website Vệ Tinh Để Thống Trị Từ Khóa Ngách Bán Hàng",
+      "title": "Nhân Bản Chuỗi 10+ Website Vệ Tinh Thống Trị Từ Khóa",
+      "post_id": "1598668088311889161",
+      "url": "https://www.bnitopaz.com/2026/11/nhan-ban-chuoi-10-website-ve-tinh-thong.html",
+      "published": "2026-11-16T15:30:00-08:00",
+      "posted_at": "2026-10-28T08:59:39.723366+00:00",
       "mode": "schedule"
     }
   ]
