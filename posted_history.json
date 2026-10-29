@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-28T20:51:45.334250+00:00",
-  "total_posted": 129,
+  "last_updated": "2026-10-29T00:40:24.727419+00:00",
+  "total_posted": 130,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -766,7 +766,9 @@
       "url": "https://www.bnitopaz.com/2026/10/bang-so-sanh-san-pham-truc-quan-on-bay.html",
       "published": "2026-10-28T16:30:00-07:00",
       "posted_at": "2026-10-18T14:48:53.519224+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-29T00:40:27.545681+00:00"
     },
     {
       "topic": "Nghệ Thuật Bố Trí Feedback & Đánh Giá Khách Hàng Để Xây Dựng Niềm Tin Tuyệt Đối",
@@ -1297,6 +1299,15 @@
       "url": "https://www.bnitopaz.com/2026/11/quan-ly-hang-tram-khach-hang-tren-mot.html",
       "published": "2026-11-16T23:30:00-08:00",
       "posted_at": "2026-10-28T20:51:45.334231+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Bí Quyết Giới Thiệu Khách Hàng Tái Gia Hạn Gói PRO Hàng Tháng Đều Đặn Để Nhận Hoa Hồng Trọn Đời",
+      "title": "Bí Quyết Giới Thiệu Khách Hàng Tái Gia Hạn Gói PRO Đều Đặn",
+      "post_id": "2368274170483762711",
+      "url": "https://www.bnitopaz.com/2026/11/bi-quyet-gioi-thieu-khach-hang-tai-gia.html",
+      "published": "2026-11-17T15:30:00-08:00",
+      "posted_at": "2026-10-29T00:40:24.727399+00:00",
       "mode": "schedule"
     }
   ]
