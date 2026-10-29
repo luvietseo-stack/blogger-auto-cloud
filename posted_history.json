@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-29T06:31:35.753846+00:00",
-  "total_posted": 131,
+  "last_updated": "2026-10-29T13:45:31.020561+00:00",
+  "total_posted": 132,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -788,7 +788,9 @@
       "url": "https://www.bnitopaz.com/2026/10/toi-uu-toc-o-tai-trang-duoi-1-giay-on.html",
       "published": "2026-10-29T00:30:00-07:00",
       "posted_at": "2026-10-18T20:16:05.795522+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-29T13:45:34.274838+00:00"
     },
     {
       "topic": "Tại Sao Giao Diện Tối Giản (Minimalism) Lại Giúp Bán Hàng Online Hiệu Quả Hơn Web Rườm Rà?",
@@ -1319,6 +1321,15 @@
       "url": "https://www.bnitopaz.com/2026/11/tan-dung-100-template-ong-goi-dich-vu.html",
       "published": "2026-11-17T20:30:00-08:00",
       "posted_at": "2026-10-29T06:31:35.753826+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Hành Trình Từ Người Bán Hàng Online Trở Thành Đối Tác Phân Phối Phần Mềm SaaS Độc Quyền",
+      "title": "Hành Trình Từ Bán Hàng Online Sang Đối Tác SaaS Độc Quyền",
+      "post_id": "110680456419115550",
+      "url": "https://www.bnitopaz.com/2026/11/hanh-trinh-tu-ban-hang-online-sang-oi.html",
+      "published": "2026-11-17T23:30:00-08:00",
+      "posted_at": "2026-10-29T13:45:31.020542+00:00",
       "mode": "schedule"
     }
   ]
