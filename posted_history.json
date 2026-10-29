@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-29T00:40:24.727419+00:00",
-  "total_posted": 130,
+  "last_updated": "2026-10-29T06:31:35.753846+00:00",
+  "total_posted": 131,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -777,7 +777,9 @@
       "url": "https://www.bnitopaz.com/2026/10/bo-tri-feedback-anh-gia-khach-hang-inh.html",
       "published": "2026-10-28T21:30:00-07:00",
       "posted_at": "2026-10-18T17:53:20.101084+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-29T06:31:39.796944+00:00"
     },
     {
       "topic": "Tối Ưu Tốc Độ Tải Trang Dưới 1 Giây: Bí Quyết Kỹ Thuật Đằng Sau Tỷ Lệ Chuyển Đổi Vượt Trội",
@@ -1308,6 +1310,15 @@
       "url": "https://www.bnitopaz.com/2026/11/bi-quyet-gioi-thieu-khach-hang-tai-gia.html",
       "published": "2026-11-17T15:30:00-08:00",
       "posted_at": "2026-10-29T00:40:24.727399+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Cách Tận Dụng Kho 100+ Template Sẵn Có Để Đóng Gói Thành Dịch Vụ Setup Shop Trọn Gói",
+      "title": "Tận Dụng 100+ Template Đóng Gói Dịch Vụ Setup Shop Trọn Gói",
+      "post_id": "5900411808679223113",
+      "url": "https://www.bnitopaz.com/2026/11/tan-dung-100-template-ong-goi-dich-vu.html",
+      "published": "2026-11-17T20:30:00-08:00",
+      "posted_at": "2026-10-29T06:31:35.753826+00:00",
       "mode": "schedule"
     }
   ]
