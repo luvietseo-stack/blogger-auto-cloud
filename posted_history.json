@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-29T19:30:17.858329+00:00",
-  "total_posted": 133,
+  "last_updated": "2026-10-29T23:36:10.471517+00:00",
+  "total_posted": 134,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -799,7 +799,9 @@
       "url": "https://www.bnitopaz.com/2026/10/giao-dien-toi-gian-giup-ban-hang-online.html",
       "published": "2026-10-29T16:30:00-07:00",
       "posted_at": "2026-10-18T22:29:28.877587+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-29T23:36:13.993493+00:00"
     },
     {
       "topic": "Tích Hợp Popup Ưu Đãi Khi Khách Định Rời Trang (Exit-Intent Popup) Để Giữ Chân Người Mua",
@@ -1339,6 +1341,15 @@
       "url": "https://www.bnitopaz.com/2026/11/xay-dung-cong-ong-khach-hang-trung.html",
       "published": "2026-11-18T15:30:00-08:00",
       "posted_at": "2026-10-29T19:30:17.858312+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Chiến Lược Tiếp Cận 5 Triệu Hộ Kinh Doanh Cá Thể Đang Khát Khao Làm Website Bán Hàng",
+      "title": "Tiếp Cận 5 Triệu Hộ Kinh Doanh Cá Thể Cần Website Bán Hàng",
+      "post_id": "6362929461074890535",
+      "url": "https://www.bnitopaz.com/2026/11/tiep-can-5-trieu-ho-kinh-doanh-ca-can.html",
+      "published": "2026-11-18T20:30:00-08:00",
+      "posted_at": "2026-10-29T23:36:10.471497+00:00",
       "mode": "schedule"
     }
   ]
