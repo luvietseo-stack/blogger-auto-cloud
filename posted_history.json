@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-30T03:02:46.087480+00:00",
-  "total_posted": 135,
+  "last_updated": "2026-10-30T09:47:34.343011+00:00",
+  "total_posted": 136,
   "history": [
     {
       "topic": "Tại Sao BNI Là Tổ Chức Kết Nối Kinh Doanh Thành Công Nhất Thế Giới",
@@ -810,7 +810,9 @@
       "url": "https://www.bnitopaz.com/2026/10/tich-hop-popup-uu-ai-khi-khach-inh-roi.html",
       "published": "2026-10-29T21:30:00-07:00",
       "posted_at": "2026-10-19T00:31:53.181242+00:00",
-      "mode": "schedule"
+      "mode": "schedule",
+      "indexed": true,
+      "indexed_at": "2026-10-30T09:47:37.232929+00:00"
     },
     {
       "topic": "Bảo Vệ Doanh Số: Cách Thiết Lập Cơ Chế Tự Động Khóa Spam Và Đơn Hàng Rác",
@@ -1359,6 +1361,15 @@
       "url": "https://www.bnitopaz.com/2026/11/cach-tao-khoa-hoc-kinh-doanh-online-kem.html",
       "published": "2026-11-18T23:30:00-08:00",
       "posted_at": "2026-10-30T03:02:46.087463+00:00",
+      "mode": "schedule"
+    },
+    {
+      "topic": "Tận Dụng Nguồn Khách Hàng Có Sẵn Của Agency Để Bán Thêm Gói Vận Hành E-Commerce Đa Kênh",
+      "title": "Tận Dụng Nguồn Khách Hàng Có Sẵn Của Agency Bán Gói E-Commerce",
+      "post_id": "5970975550912403911",
+      "url": "https://www.bnitopaz.com/2026/11/tan-dung-nguon-khach-hang-co-san-cua.html",
+      "published": "2026-11-19T15:30:00-08:00",
+      "posted_at": "2026-10-30T09:47:34.342992+00:00",
       "mode": "schedule"
     }
   ]
